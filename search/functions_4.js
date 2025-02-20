@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['dopplercorrection_0',['DopplerCorrection',['../classMiniballReaction.html#a5d01f92d8d69bd893e4024ae7b7e0c9e',1,'MiniballReaction::DopplerCorrection(double gen, double gth, double gph, double pbeta, double ptheta, double pphi)'],['../classMiniballReaction.html#ab7f4d6b83f169328a45a1437dd6661bd',1,'MiniballReaction::DopplerCorrection(double gen, double gth, double gph, bool ejectile)'],['../classMiniballReaction.html#a585cb328c22cbb56f38c6cbee3d57d2e',1,'MiniballReaction::DopplerCorrection(std::shared_ptr&lt; GammaRayEvt &gt; g, double pbeta, double ptheta, double pphi)'],['../classMiniballReaction.html#aa18afccc65ea6128d9b88e84412f67dc',1,'MiniballReaction::DopplerCorrection(std::shared_ptr&lt; GammaRayEvt &gt; g, bool ejectile)'],['../classMiniballReaction.html#af64c49aadaacd581f58ed7ec00ccc4e5',1,'MiniballReaction::DopplerCorrection(std::shared_ptr&lt; SpedeEvt &gt; s, bool ejectile)']]],
+  ['dopplershift_1',['DopplerShift',['../classMiniballReaction.html#af89fb4ab0b2193ef16226017c1504f5a',1,'MiniballReaction']]],
+  ['drawrect_2',['drawRect',['../classOverload__Test.html#a840305784a1944b4de9826a1f4204365',1,'Overload_Test::drawRect(int, int, int, int)'],['../classOverload__Test.html#a7a613f50092cbc0ef830a818d9f3409c',1,'Overload_Test::drawRect(const Rect &amp;r)']]]
+];
