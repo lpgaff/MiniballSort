@@ -160,7 +160,7 @@ var searchData=
   ['midas_5fdata_157',['midas_data',['../classMiniballConverter.html#ac6b1e87a52a735f9776161291d67f4a6',1,'MiniballConverter']]],
   ['midasconverter_2ecc_158',['MidasConverter.cc',['../MidasConverter_8cc.html',1,'']]],
   ['midasconverter_2ehh_159',['MidasConverter.hh',['../MidasConverter_8hh.html',1,'']]],
-  ['miniball_20geometry_20class_160',['Miniball Geometry class',['../classMiniballGeometry.html#autotoc_md1',1,'']]],
+  ['miniball_20geometry_20class_160',['Miniball Geometry class',['../classMiniballGeometry.html#autotoc_md6',1,'']]],
   ['miniballanglefitter_161',['MiniballAngleFitter',['../classMiniballAngleFitter.html',1,'MiniballAngleFitter'],['../classMiniballAngleFitter.html#aad7b5fa9d70c6ae03e71faf3399bdbe2',1,'MiniballAngleFitter::MiniballAngleFitter()'],['../classMiniballAngleFitter.html#a48e06f653a00ec1e1aacd447a3fab475',1,'MiniballAngleFitter::MiniballAngleFitter(std::string settings_file, std::string reaction_file)'],['../classMiniballAngleFitter.html#abfee3c53736842266c16713f1f2ad90e',1,'MiniballAngleFitter::MiniballAngleFitter(std::shared_ptr&lt; MiniballSettings &gt; _myset, std::shared_ptr&lt; MiniballReaction &gt; _myreact)']]],
   ['miniballanglefitter_2ecc_162',['MiniballAngleFitter.cc',['../MiniballAngleFitter_8cc.html',1,'']]],
   ['miniballanglefitter_2ehh_163',['MiniballAngleFitter.hh',['../MiniballAngleFitter_8hh.html',1,'']]],

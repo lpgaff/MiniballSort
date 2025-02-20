@@ -28,7 +28,7 @@ var searchData=
   ['default_5fmwd_5fwindow_25',['default_MWD_Window',['../classMiniballCalibration.html#a4750501b5cf4c51761837be1947787a4',1,'MiniballCalibration']]],
   ['default_5fqint_26',['default_qint',['../classMiniballCalibration.html#ae7b71b950f74cbe392e9d502b54733f0',1,'MiniballCalibration']]],
   ['default_5fruntask_27',['DEFAULT_RUNTASK',['../MbsDefines_8hh.html#a1cca0e05c3abab5e7b020565d9e96c72',1,'MbsDefines.hh']]],
-  ['dependencies_28',['Dependencies',['../index.html#autotoc_md6',1,'']]],
+  ['dependencies_28',['Dependencies',['../index.html#autotoc_md4',1,'']]],
   ['descr_29',['descr',['../classMBSBufferElem.html#a46a1ee4aea4c753edfbc85a3d2b55bff',1,'MBSBufferElem']]],
   ['det_30',['det',['../classParticleEvt.html#a0cfed2e194cb43ef268c8679633f4f91',1,'ParticleEvt::det'],['../classBeamDumpEvt.html#add3812be1946fd29ad56f025aa29b9e0',1,'BeamDumpEvt::det']]],
   ['detime_31',['detime',['../classIonChamberEvt.html#a020254a7680f7c59f5b0dd8fdb7bee48',1,'IonChamberEvt']]],
@@ -71,6 +71,6 @@ var searchData=
   ['doppler_5fmode_68',['doppler_mode',['../classMiniballReaction.html#ad8e36614cc51caefe57c9e944fb17499',1,'MiniballReaction']]],
   ['dopplercorrection_69',['DopplerCorrection',['../classMiniballReaction.html#a5d01f92d8d69bd893e4024ae7b7e0c9e',1,'MiniballReaction::DopplerCorrection(double gen, double gth, double gph, double pbeta, double ptheta, double pphi)'],['../classMiniballReaction.html#ab7f4d6b83f169328a45a1437dd6661bd',1,'MiniballReaction::DopplerCorrection(double gen, double gth, double gph, bool ejectile)'],['../classMiniballReaction.html#a585cb328c22cbb56f38c6cbee3d57d2e',1,'MiniballReaction::DopplerCorrection(std::shared_ptr&lt; GammaRayEvt &gt; g, double pbeta, double ptheta, double pphi)'],['../classMiniballReaction.html#aa18afccc65ea6128d9b88e84412f67dc',1,'MiniballReaction::DopplerCorrection(std::shared_ptr&lt; GammaRayEvt &gt; g, bool ejectile)'],['../classMiniballReaction.html#af64c49aadaacd581f58ed7ec00ccc4e5',1,'MiniballReaction::DopplerCorrection(std::shared_ptr&lt; SpedeEvt &gt; s, bool ejectile)']]],
   ['dopplershift_70',['DopplerShift',['../classMiniballReaction.html#af89fb4ab0b2193ef16226017c1504f5a',1,'MiniballReaction']]],
-  ['download_71',['Download',['../index.html#autotoc_md3',1,'']]],
+  ['download_71',['Download',['../index.html#autotoc_md1',1,'']]],
   ['dsize_72',['dsize',['../classMBSBufferElem.html#a8a5b95675fc4d6427d931b4303ff6aff',1,'MBSBufferElem']]]
 ];
