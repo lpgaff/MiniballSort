@@ -1,23 +1,6 @@
 var searchData=
 [
-  ['sc_5fboard_0',['sc_board',['../classMiniballSettings.html#afba8930e02cff0ea5daf1bf48f9c6acb',1,'MiniballSettings']]],
-  ['sc_5fch_1',['sc_ch',['../classMiniballSettings.html#aeda48e5300f27351882d6ed66cb40f3a',1,'MiniballSettings']]],
-  ['sc_5fcode_2',['sc_code',['../classMiniballSettings.html#afbd2ebec28fe6a4fe0fde4ebe4041234',1,'MiniballSettings']]],
-  ['sc_5fdgf_3',['sc_dgf',['../classMiniballSettings.html#ad8b58c7b9b777622b3d8dfc7f42e4b95',1,'MiniballSettings']]],
-  ['sc_5fsfp_4',['sc_sfp',['../classMiniballSettings.html#ac0e6d45da2da7b07e03de03d8b6b435f',1,'MiniballSettings']]],
-  ['scaler_5funit_5foffset_5',['scaler_unit_offset',['../classMiniballSettings.html#a78ac640c91999017d947980fa0d65cb7',1,'MiniballSettings']]],
-  ['scaler_5fvme_5flast_6',['scaler_vme_last',['../classMiniballSettings.html#a9aee649f597e2de1edb48998d12070f6',1,'MiniballSettings']]],
-  ['scalers_7',['scalers',['../classMBSInfoPackets.html#a7bcdadc55d7c15be61645efcfa2f8ce6',1,'MBSInfoPackets']]],
-  ['sel_8',['sel',['../classmux__using__with.html#ac474329b8f25c575e4376d65f6a3e43f',1,'mux_using_with']]],
-  ['sfp_9',['sfp',['../classFebexData.html#a4d8358bf79f996aed63ef713f8ee1c3f',1,'FebexData::sfp'],['../classInfoData.html#ad581e2fc3fea7702014d76830b691b1e',1,'InfoData::sfp']]],
-  ['spede_5fboard_10',['spede_board',['../classMiniballSettings.html#a84fdd80d4ed71d925ce5c86d80f67104',1,'MiniballSettings']]],
-  ['spede_5fch_11',['spede_ch',['../classMiniballSettings.html#a6fdfd6fbcc296ded62242abffa7438e7',1,'MiniballSettings']]],
-  ['spede_5fdgf_12',['spede_dgf',['../classMiniballSettings.html#a50ffc5cde92a15a6a63bbfcbb331abe7',1,'MiniballSettings']]],
-  ['spede_5fdist_13',['spede_dist',['../classMiniballReaction.html#ac0790ef128a34e9d166a318f553c8f52',1,'MiniballReaction']]],
-  ['spede_5foffset_14',['spede_offset',['../classMiniballReaction.html#a1a2793ef07a0f13da6842d10815521e3',1,'MiniballReaction']]],
-  ['spede_5fseg_15',['spede_seg',['../classMiniballSettings.html#aff3b9d49ba4c82ca28462f0ffb93952e',1,'MiniballSettings']]],
-  ['spede_5fsfp_16',['spede_sfp',['../classMiniballSettings.html#a8f9856eb75f806aedcd2719309e84fb1',1,'MiniballSettings']]],
-  ['std_5flogic_5f1164_17',['std_logic_1164',['../classmux__using__with.html#ae984d6918908b859c4f9c9a950a0cfee',1,'mux_using_with']]],
-  ['sync_5fhsb_5fcode_18',['sync_hsb_code',['../classMiniballSettings.html#af993f88852c27af195fd6715b50f4f69',1,'MiniballSettings']]],
-  ['sync_5fmsb_5fcode_19',['sync_msb_code',['../classMiniballSettings.html#a6dc75fd894ab66705e5d82a303972344',1,'MiniballSettings']]]
+  ['qint_0',['Qint',['../classFebexData.html#afc8e8c653c724ff801997e9260e5b2d0',1,'FebexData']]],
+  ['qmax_5fdefault_1',['qmax_default',['../classMiniballConverter.html#acb39e75eeed4cc49c52f8e8c8dbd188f',1,'MiniballConverter']]],
+  ['qshort_2',['Qshort',['../classAdcData.html#a3ffd820fa1bb3981e37fc9fa12092788',1,'AdcData::Qshort'],['../classDgfData.html#a104d75737040f6f4027ff3920aed7d9d',1,'DgfData::Qshort'],['../classFebexData.html#a42fffa29a7c95a8be3a3aaf28ba7344d',1,'FebexData::Qshort']]]
 ];

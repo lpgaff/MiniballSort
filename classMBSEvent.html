@@ -88,10 +88,13 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classMBSEvent-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">MBSEvent Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -119,6 +122,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acf6700e876c44ffe93cb8097aaa236fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1af9d5938634fcd14dce7b3917cbaab" id="r_af1af9d5938634fcd14dce7b3917cbaab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1af9d5938634fcd14dce7b3917cbaab">Show</a> (UInt_t verbose=0) const</td></tr>
 <tr class="separator:af1af9d5938634fcd14dce7b3917cbaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:adb44d8496982911a03c6ead91c926e28" id="r_adb44d8496982911a03c6ead91c926e28"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classMBSSubEvent.html">MBSSubEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb44d8496982911a03c6ead91c926e28">sevts</a></td></tr>
+<tr class="separator:adb44d8496982911a03c6ead91c926e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a558c5a8b80c13ff34c5eb43eb8cd6e4c" id="r_a558c5a8b80c13ff34c5eb43eb8cd6e4c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; UInt_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a558c5a8b80c13ff34c5eb43eb8cd6e4c">data</a></td></tr>
+<tr class="separator:a558c5a8b80c13ff34c5eb43eb8cd6e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e0fd52916b32a5094a0755abdf914c" id="r_a50e0fd52916b32a5094a0755abdf914c"><td class="memItemLeft" align="right" valign="top">ULong_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50e0fd52916b32a5094a0755abdf914c">eventid</a></td></tr>
+<tr class="separator:a50e0fd52916b32a5094a0755abdf914c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -149,6 +161,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MbsFormat_8hh_source.html#l00324">324</a> of file <a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MbsFormat_8cc_source.html#l00494">MBS::GetNextEventFromStream()</a>, <a class="el" href="MbsFormat_8cc_source.html#l00234">MBS::GetNextLmdEvent()</a>, and <a class="el" href="MbsFormat_8cc_source.html#l00299">MBS::GetNextMedEvent()</a>.</p>
+
 </div>
 </div>
 <a id="ad611fd3856d90d16d628cc17b1ac901a" name="ad611fd3856d90d16d628cc17b1ac901a"></a>
@@ -175,6 +189,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MbsFormat_8hh_source.html#l00283">283</a> of file <a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MbsFormat_8hh_source.html#l00330">Show()</a>.</p>
 
 </div>
 </div>
@@ -203,6 +219,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MbsFormat_8hh_source.html#l00294">294</a> of file <a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00004">MiniballMbsConverter::ProcessBlock()</a>, and <a class="el" href="MbsFormat_8hh_source.html#l00330">Show()</a>.</p>
+
 </div>
 </div>
 <a id="aa4fa6bb048e792307a5f461179df0d7c" name="aa4fa6bb048e792307a5f461179df0d7c"></a>
@@ -229,6 +247,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MbsFormat_8hh_source.html#l00300">300</a> of file <a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, and <a class="el" href="MedConverter_8cc_source.html#l00747">MiniballMedConverter::ConvertFile()</a>.</p>
 
 </div>
 </div>
@@ -257,6 +277,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MbsFormat_8hh_source.html#l00289">289</a> of file <a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MbsFormat_8cc_source.html#l00234">MBS::GetNextLmdEvent()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00004">MiniballMbsConverter::ProcessBlock()</a>, and <a class="el" href="MbsFormat_8hh_source.html#l00330">Show()</a>.</p>
+
 </div>
 </div>
 <a id="a5edce07d7ec5a4b32818e380c6061754" name="a5edce07d7ec5a4b32818e380c6061754"></a>
@@ -283,6 +305,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MbsFormat_8hh_source.html#l00317">317</a> of file <a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MedConverter_8cc_source.html#l00004">MiniballMedConverter::ProcessEvent()</a>.</p>
 
 </div>
 </div>
@@ -311,6 +335,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MbsFormat_8hh_source.html#l00318">318</a> of file <a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MedConverter_8cc_source.html#l00004">MiniballMedConverter::ProcessEvent()</a>.</p>
+
 </div>
 </div>
 <a id="a9fbd728225e0f22a2c23104845821212" name="a9fbd728225e0f22a2c23104845821212"></a>
@@ -338,6 +364,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MbsFormat_8hh_source.html#l00277">277</a> of file <a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MbsFormat_8hh_source.html#l00330">Show()</a>.</p>
+
 </div>
 </div>
 <a id="a09dbfad4d05cb2173dd04f891b974cbf" name="a09dbfad4d05cb2173dd04f891b974cbf"></a>
@@ -364,6 +392,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MbsFormat_8hh_source.html#l00303">303</a> of file <a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MbsFormat_8cc_source.html#l00580">MBS::ConvertVmeHeader()</a>, and <a class="el" href="MbsFormat_8cc_source.html#l00234">MBS::GetNextLmdEvent()</a>.</p>
 
 </div>
 </div>
@@ -419,6 +449,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MbsFormat_8hh_source.html#l00307">307</a> of file <a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MbsFormat_8cc_source.html#l00234">MBS::GetNextLmdEvent()</a>.</p>
+
 </div>
 </div>
 <a id="a25f6af854b9d634b299930c53bf56c3b" name="a25f6af854b9d634b299930c53bf56c3b"></a>
@@ -445,6 +477,87 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MbsFormat_8hh_source.html#l00312">312</a> of file <a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MbsFormat_8cc_source.html#l00299">MBS::GetNextMedEvent()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a558c5a8b80c13ff34c5eb43eb8cd6e4c" name="a558c5a8b80c13ff34c5eb43eb8cd6e4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a558c5a8b80c13ff34c5eb43eb8cd6e4c">&#9670;&#160;</a></span>data</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;UInt_t&gt; MBSEvent::data</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="MbsFormat_8hh_source.html#l00271">271</a> of file <a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MbsFormat_8hh_source.html#l00324">Clear()</a>, <a class="el" href="MbsFormat_8hh_source.html#l00283">GetCount()</a>, <a class="el" href="MbsFormat_8hh_source.html#l00294">GetData()</a>, <a class="el" href="MbsFormat_8hh_source.html#l00289">GetNData()</a>, <a class="el" href="MbsFormat_8hh_source.html#l00277">GetTrigger()</a>, and <a class="el" href="MbsFormat_8hh_source.html#l00307">Store()</a>.</p>
+
+</div>
+</div>
+<a id="a50e0fd52916b32a5094a0755abdf914c" name="a50e0fd52916b32a5094a0755abdf914c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e0fd52916b32a5094a0755abdf914c">&#9670;&#160;</a></span>eventid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ULong_t MBSEvent::eventid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="MbsFormat_8hh_source.html#l00272">272</a> of file <a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MbsFormat_8hh_source.html#l00300">GetEventID()</a>, and <a class="el" href="MbsFormat_8hh_source.html#l00303">SetEventID()</a>.</p>
+
+</div>
+</div>
+<a id="adb44d8496982911a03c6ead91c926e28" name="adb44d8496982911a03c6ead91c926e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb44d8496982911a03c6ead91c926e28">&#9670;&#160;</a></span>sevts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classMBSSubEvent.html">MBSSubEvent</a>&gt; MBSEvent::sevts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="MbsFormat_8hh_source.html#l00270">270</a> of file <a class="el" href="MbsFormat_8hh_source.html">MbsFormat.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MbsFormat_8hh_source.html#l00324">Clear()</a>, <a class="el" href="MbsFormat_8hh_source.html#l00317">GetNumberOfSubEvents()</a>, <a class="el" href="MbsFormat_8hh_source.html#l00318">GetSubEvent()</a>, and <a class="el" href="MbsFormat_8hh_source.html#l00312">StoreSubEvent()</a>.</p>
 
 </div>
 </div>

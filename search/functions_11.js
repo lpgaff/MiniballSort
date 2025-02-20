@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ungroupedfunction_0',['ungroupedFunction',['../classMemgrp__Test.html#a8a3a4ac34b2e25696159ac420bd4bdc6',1,'Memgrp_Test']]]
+  ['verbose_0',['Verbose',['../classDataSpy.html#af7f516e7a0d0b99e298038344f559853',1,'DataSpy']]]
 ];

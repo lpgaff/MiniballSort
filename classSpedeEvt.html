@@ -88,10 +88,13 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classSpedeEvt-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">SpedeEvt Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="MiniballEvts_8hh_source.html">MiniballEvts.hh</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SpedeEvt:</div>
 <div class="dyncontent">
@@ -101,6 +104,10 @@ Inheritance diagram for SpedeEvt:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aa2c844296232480318557bd3311ba724" id="r_aa2c844296232480318557bd3311ba724"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2c844296232480318557bd3311ba724">SpedeEvt</a> ()</td></tr>
+<tr class="separator:aa2c844296232480318557bd3311ba724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1007584815504eb3c19e1f013625fda" id="r_ac1007584815504eb3c19e1f013625fda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1007584815504eb3c19e1f013625fda">~SpedeEvt</a> ()</td></tr>
+<tr class="separator:ac1007584815504eb3c19e1f013625fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28e15651935e50c12f29f7c3219b79f5" id="r_a28e15651935e50c12f29f7c3219b79f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28e15651935e50c12f29f7c3219b79f5">SetEnergy</a> (float e)</td></tr>
 <tr class="separator:a28e15651935e50c12f29f7c3219b79f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa32c3f31fe702cb3c705970539c8b7fc" id="r_aa32c3f31fe702cb3c705970539c8b7fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa32c3f31fe702cb3c705970539c8b7fc">SetTime</a> (unsigned long long t)</td></tr>
@@ -113,6 +120,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a19d9c1f4a6c7203e559aafdd36550179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a189f9f1024a9e53046bfef9463b61ea4" id="r_a189f9f1024a9e53046bfef9463b61ea4"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a189f9f1024a9e53046bfef9463b61ea4">GetSegment</a> ()</td></tr>
 <tr class="separator:a189f9f1024a9e53046bfef9463b61ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:acc889b0133bc137d21b24b6474d1f041" id="r_acc889b0133bc137d21b24b6474d1f041"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc889b0133bc137d21b24b6474d1f041">energy</a></td></tr>
+<tr class="memdesc:acc889b0133bc137d21b24b6474d1f041"><td class="mdescLeft">&#160;</td><td class="mdescRight">energy in keV  <br /></td></tr>
+<tr class="separator:acc889b0133bc137d21b24b6474d1f041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52a60a354a107e260b35a393cccd9a65" id="r_a52a60a354a107e260b35a393cccd9a65"><td class="memItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52a60a354a107e260b35a393cccd9a65">time</a></td></tr>
+<tr class="memdesc:a52a60a354a107e260b35a393cccd9a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">timestamp of event  <br /></td></tr>
+<tr class="separator:a52a60a354a107e260b35a393cccd9a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebb7caf5439f43a5dfc589a37056c06c" id="r_aebb7caf5439f43a5dfc589a37056c06c"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebb7caf5439f43a5dfc589a37056c06c">seg</a></td></tr>
+<tr class="memdesc:aebb7caf5439f43a5dfc589a37056c06c"><td class="mdescLeft">&#160;</td><td class="mdescRight">segment ID within SPEDE  <br /></td></tr>
+<tr class="separator:aebb7caf5439f43a5dfc589a37056c06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -225,6 +244,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MiniballEvts_8hh_source.html#l00169">169</a> of file <a class="el" href="MiniballEvts_8hh_source.html">MiniballEvts.hh</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Reaction_8hh_source.html#l00303">MiniballReaction::GetElectronPhi()</a>, and <a class="el" href="Reaction_8hh_source.html#l00297">MiniballReaction::GetElectronTheta()</a>.</p>
+
 </div>
 </div>
 <a id="a19d9c1f4a6c7203e559aafdd36550179" name="a19d9c1f4a6c7203e559aafdd36550179"></a>
@@ -279,6 +300,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MiniballEvts_8hh_source.html#l00162">162</a> of file <a class="el" href="MiniballEvts_8hh_source.html">MiniballEvts.hh</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MiniballEvts_8cc_source.html#l00100">MiniballEvts::AddEvt()</a>.</p>
+
 </div>
 </div>
 <a id="a3a436487642b12c286c8c054c9df4455" name="a3a436487642b12c286c8c054c9df4455"></a>
@@ -306,6 +329,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MiniballEvts_8hh_source.html#l00164">164</a> of file <a class="el" href="MiniballEvts_8hh_source.html">MiniballEvts.hh</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="MiniballEvts_8cc_source.html#l00100">MiniballEvts::AddEvt()</a>.</p>
+
 </div>
 </div>
 <a id="aa32c3f31fe702cb3c705970539c8b7fc" name="aa32c3f31fe702cb3c705970539c8b7fc"></a>
@@ -332,6 +357,93 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MiniballEvts_8hh_source.html#l00163">163</a> of file <a class="el" href="MiniballEvts_8hh_source.html">MiniballEvts.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MiniballEvts_8cc_source.html#l00100">MiniballEvts::AddEvt()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="acc889b0133bc137d21b24b6474d1f041" name="acc889b0133bc137d21b24b6474d1f041"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc889b0133bc137d21b24b6474d1f041">&#9670;&#160;</a></span>energy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SpedeEvt::energy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>energy in keV </p>
+
+<p class="definition">Definition at line <a class="el" href="MiniballEvts_8hh_source.html#l00174">174</a> of file <a class="el" href="MiniballEvts_8hh_source.html">MiniballEvts.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MiniballEvts_8hh_source.html#l00167">GetEnergy()</a>, and <a class="el" href="MiniballEvts_8hh_source.html#l00162">SetEnergy()</a>.</p>
+
+</div>
+</div>
+<a id="aebb7caf5439f43a5dfc589a37056c06c" name="aebb7caf5439f43a5dfc589a37056c06c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebb7caf5439f43a5dfc589a37056c06c">&#9670;&#160;</a></span>seg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char SpedeEvt::seg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>segment ID within SPEDE </p>
+
+<p class="definition">Definition at line <a class="el" href="MiniballEvts_8hh_source.html#l00176">176</a> of file <a class="el" href="MiniballEvts_8hh_source.html">MiniballEvts.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MiniballEvts_8hh_source.html#l00169">GetSegment()</a>, and <a class="el" href="MiniballEvts_8hh_source.html#l00164">SetSegment()</a>.</p>
+
+</div>
+</div>
+<a id="a52a60a354a107e260b35a393cccd9a65" name="a52a60a354a107e260b35a393cccd9a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52a60a354a107e260b35a393cccd9a65">&#9670;&#160;</a></span>time</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long long SpedeEvt::time</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>timestamp of event </p>
+
+<p class="definition">Definition at line <a class="el" href="MiniballEvts_8hh_source.html#l00175">175</a> of file <a class="el" href="MiniballEvts_8hh_source.html">MiniballEvts.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MiniballEvts_8hh_source.html#l00168">GetTime()</a>, and <a class="el" href="MiniballEvts_8hh_source.html#l00163">SetTime()</a>.</p>
 
 </div>
 </div>

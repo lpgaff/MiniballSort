@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['e_0',['E',['../classE.html',1,'']]],
-  ['enum_5ftest_1',['Enum_Test',['../classEnum__Test.html',1,'']]],
-  ['example_5ftest_2',['Example_Test',['../classExample__Test.html',1,'']]]
+  ['febexdata_0',['FebexData',['../classFebexData.html',1,'']]],
+  ['febexmwd_1',['FebexMWD',['../classFebexMWD.html',1,'']]],
+  ['fitfunc_2',['FitFunc',['../classFitFunc.html',1,'']]]
 ];

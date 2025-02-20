@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['eval1_0',['EVal1',['../classAfterdoc__Test.html#adab0cd7ad3b4875e245ca8f6238a388aae054276790e35692ad0abe10c5b75da4',1,'Afterdoc_Test']]],
-  ['eval2_1',['EVal2',['../classAfterdoc__Test.html#adab0cd7ad3b4875e245ca8f6238a388aac849f37624d8d2d68ca72c4a8df9cf99',1,'Afterdoc_Test']]]
+  ['swap_5fendian_0',['SWAP_ENDIAN',['../classMiniballMidasConverter.html#aeded15ea4d7cf288184dd6061b23ac17ae240feffd74644e52e27b1e81c134113',1,'MiniballMidasConverter']]],
+  ['swap_5fknown_1',['SWAP_KNOWN',['../classMiniballMidasConverter.html#aeded15ea4d7cf288184dd6061b23ac17a1564515150c855a8a41e15450e5374e7',1,'MiniballMidasConverter']]],
+  ['swap_5fwords_2',['SWAP_WORDS',['../classMiniballMidasConverter.html#aeded15ea4d7cf288184dd6061b23ac17a77042de3ceb29885a67b621729877aab',1,'MiniballMidasConverter']]]
 ];
