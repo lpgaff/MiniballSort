@@ -88,6 +88,7 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classMiniballMedConverter-members.html">List of all members</a>  </div>
@@ -144,6 +145,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aba9f87bbdc044ece364745b8d823b6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a399e0bb4e1be7918bb5d54f6f6688f6e" id="r_a399e0bb4e1be7918bb5d54f6f6688f6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMiniballConverter.html#a399e0bb4e1be7918bb5d54f6f6688f6e">BuildMbsIndex</a> ()</td></tr>
 <tr class="separator:a399e0bb4e1be7918bb5d54f6f6688f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a180f4fe84a2175228bff29604e874700" id="r_a180f4fe84a2175228bff29604e874700"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMiniballConverter.html#a180f4fe84a2175228bff29604e874700">SortDataVector</a> ()</td></tr>
+<tr class="separator:a180f4fe84a2175228bff29604e874700"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6337eee1a02259ee36fc94cab44722a" id="r_ac6337eee1a02259ee36fc94cab44722a"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMiniballConverter.html#ac6337eee1a02259ee36fc94cab44722a">SortTree</a> (bool do_sort=true)</td></tr>
 <tr class="separator:ac6337eee1a02259ee36fc94cab44722a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae49d28efb1b9053936cd951f81b3634b" id="r_ae49d28efb1b9053936cd951f81b3634b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMiniballConverter.html#ae49d28efb1b9053936cd951f81b3634b">SetOutput</a> (std::string output_file_name)</td></tr>
@@ -172,6 +175,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad959b293e67d5bb8bb4afe58b345db39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c21679aa96023a7cea447b58b7b16c4" id="r_a8c21679aa96023a7cea447b58b7b16c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMiniballConverter.html#a8c21679aa96023a7cea447b58b7b16c4">AddProgressBar</a> (std::shared_ptr&lt; TGProgressBar &gt; myprog)</td></tr>
 <tr class="separator:a8c21679aa96023a7cea447b58b7b16c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a06397967eed76f0e2a30d727521ca3f7" id="r_a06397967eed76f0e2a30d727521ca3f7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMiniballConverter.html#a06397967eed76f0e2a30d727521ca3f7">TimeComparator</a> (const std::shared_ptr&lt; <a class="el" href="classMiniballDataPackets.html">MiniballDataPackets</a> &gt; &amp;lhs, const std::shared_ptr&lt; <a class="el" href="classMiniballDataPackets.html">MiniballDataPackets</a> &gt; &amp;rhs)</td></tr>
+<tr class="separator:a06397967eed76f0e2a30d727521ca3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -451,7 +459,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00070">70</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00074">74</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00409">do_convert()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00561">MiniballGUI::gui_convert()</a>.</p>
 
@@ -480,7 +488,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00083">83</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00087">87</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MiniballGUI_8cc_source.html#l00561">MiniballGUI::gui_convert()</a>.</p>
 
@@ -555,7 +563,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00056">56</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00060">60</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00409">do_convert()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00561">MiniballGUI::gui_convert()</a>.</p>
 
@@ -614,7 +622,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00072">72</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00076">76</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00409">do_convert()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00561">MiniballGUI::gui_convert()</a>.</p>
 
@@ -643,7 +651,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00073">73</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00077">77</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>.</p>
 
@@ -672,7 +680,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00065">65</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00069">69</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -699,7 +707,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00067">67</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00071">71</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -726,9 +734,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00068">68</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00072">72</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00066">MiniballConverter::GetTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00070">MiniballConverter::GetTree()</a>.</p>
 
 </div>
 </div>
@@ -755,7 +763,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00066">66</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00070">70</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1016,9 +1024,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00061">61</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00065">65</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00056">MiniballConverter::CloseOutput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00060">MiniballConverter::CloseOutput()</a>.</p>
 
 </div>
 </div>
@@ -1128,7 +1136,36 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00054">54</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00058">58</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+
+</div>
+</div>
+<a id="a180f4fe84a2175228bff29604e874700" name="a180f4fe84a2175228bff29604e874700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a180f4fe84a2175228bff29604e874700">&#9670;&#160;</a></span>SortDataVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiniballConverter::SortDataVector </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00577">577</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00584">MiniballConverter::SortTree()</a>.</p>
 
 </div>
 </div>
@@ -1155,7 +1192,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00571">571</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00584">584</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00409">do_convert()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00561">MiniballGUI::gui_convert()</a>.</p>
 
@@ -1184,7 +1221,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00071">71</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00075">75</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00409">do_convert()</a>, and <a class="el" href="MiniballGUI_8cc_source.html#l00561">MiniballGUI::gui_convert()</a>.</p>
 
@@ -1215,7 +1252,40 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00059">59</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00747">ConvertFile()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00896">MiniballMidasConverter::ConvertFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00747">ConvertFile()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00899">MiniballMidasConverter::ConvertFile()</a>.</p>
+
+</div>
+</div>
+<a id="a06397967eed76f0e2a30d727521ca3f7" name="a06397967eed76f0e2a30d727521ca3f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06397967eed76f0e2a30d727521ca3f7">&#9670;&#160;</a></span>TimeComparator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MiniballConverter::TimeComparator </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classMiniballDataPackets.html">MiniballDataPackets</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classMiniballDataPackets.html">MiniballDataPackets</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Converter_8cc_source.html#l00570">570</a> of file <a class="el" href="Converter_8cc_source.html">Converter.cc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00577">MiniballConverter::SortDataVector()</a>.</p>
 
 </div>
 </div>
@@ -1240,9 +1310,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00213">213</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00217">217</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00083">MiniballConverter::AddProgressBar()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00747">ConvertFile()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00896">MiniballMidasConverter::ConvertFile()</a>, <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, and <a class="el" href="Converter_8cc_source.html#l00571">MiniballConverter::SortTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00087">MiniballConverter::AddProgressBar()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00747">ConvertFile()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00899">MiniballMidasConverter::ConvertFile()</a>, <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, and <a class="el" href="Converter_8cc_source.html#l00584">MiniballConverter::SortTree()</a>.</p>
 
 </div>
 </div>
@@ -1266,7 +1336,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00156">156</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00160">160</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00105">MiniballConverter::MakeTree()</a>, and <a class="el" href="MedConverter_8cc_source.html#l00079">ProcessMesytecAdcData()</a>.</p>
 
@@ -1292,7 +1362,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00146">146</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00150">150</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00076">MiniballMidasConverter::ProcessBlockData()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
 
@@ -1318,7 +1388,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00147">147</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00151">151</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00076">MiniballMidasConverter::ProcessBlockData()</a>.</p>
 
@@ -1344,9 +1414,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00210">210</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00214">214</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00070">MiniballConverter::AddCalibration()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, <a class="el" href="MedConverter_8cc_source.html#l00476">ProcessDgfData()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>, <a class="el" href="MedConverter_8cc_source.html#l00079">ProcessMesytecAdcData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00218">MiniballMidasConverter::ProcessTraceData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00074">MiniballConverter::AddCalibration()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, <a class="el" href="MedConverter_8cc_source.html#l00476">ProcessDgfData()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>, <a class="el" href="MedConverter_8cc_source.html#l00079">ProcessMesytecAdcData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00218">MiniballMidasConverter::ProcessTraceData()</a>.</p>
 
 </div>
 </div>
@@ -1370,7 +1440,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00172">172</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00176">176</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1394,7 +1464,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00170">170</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00174">174</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1418,7 +1488,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00173">173</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00177">177</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
 
@@ -1444,7 +1514,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00174">174</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00178">178</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
 
@@ -1470,7 +1540,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00175">175</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00179">179</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
 
@@ -1496,7 +1566,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00176">176</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00180">180</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
 
@@ -1522,7 +1592,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00171">171</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00175">175</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 </div>
 </div>
@@ -1546,9 +1616,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00178">178</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00182">182</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00896">MiniballMidasConverter::ConvertFile()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00899">MiniballMidasConverter::ConvertFile()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
 
 </div>
 </div>
@@ -1572,9 +1642,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00161">161</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00165">165</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="MedConverter_8cc_source.html#l00476">ProcessDgfData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, <a class="el" href="MedConverter_8cc_source.html#l00079">ProcessMesytecAdcData()</a>, <a class="el" href="Converter_8cc_source.html#l00571">MiniballConverter::SortTree()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="MedConverter_8cc_source.html#l00476">ProcessDgfData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, <a class="el" href="MedConverter_8cc_source.html#l00079">ProcessMesytecAdcData()</a>, <a class="el" href="Converter_8cc_source.html#l00577">MiniballConverter::SortDataVector()</a>, <a class="el" href="Converter_8cc_source.html#l00584">MiniballConverter::SortTree()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
 
 </div>
 </div>
@@ -1598,7 +1668,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00155">155</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00159">159</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00105">MiniballConverter::MakeTree()</a>, and <a class="el" href="MedConverter_8cc_source.html#l00476">ProcessDgfData()</a>.</p>
 
@@ -1624,7 +1694,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00119">119</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00123">123</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>.</p>
 
@@ -1650,9 +1720,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00118">118</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00122">122</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00073">MiniballConverter::EBISWindow()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00077">MiniballConverter::EBISWindow()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>.</p>
 
 </div>
 </div>
@@ -1676,9 +1746,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00110">110</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00114">114</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00073">MiniballConverter::EBISWindow()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00077">MiniballConverter::EBISWindow()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>.</p>
 
 </div>
 </div>
@@ -1728,7 +1798,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00157">157</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00161">161</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00105">MiniballConverter::MakeTree()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00218">MiniballMidasConverter::ProcessTraceData()</a>.</p>
 
@@ -1754,7 +1824,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00200">200</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00204">204</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, <a class="el" href="Converter_8cc_source.html#l00048">MiniballConverter::NewBuffer()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>.</p>
 
@@ -1780,9 +1850,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00093">93</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00097">97</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00072">MiniballConverter::EBISOnly()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, and <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00076">MiniballConverter::EBISOnly()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, and <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>.</p>
 
 </div>
 </div>
@@ -1806,7 +1876,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00099">99</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00103">103</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00076">MiniballMidasConverter::ProcessBlockData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00016">MiniballMidasConverter::ProcessBlockHeader()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>.</p>
 
@@ -1832,7 +1902,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00100">100</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00104">104</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00076">MiniballMidasConverter::ProcessBlockData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00016">MiniballMidasConverter::ProcessBlockHeader()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>.</p>
 
@@ -1858,7 +1928,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00101">101</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00105">105</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00076">MiniballMidasConverter::ProcessBlockData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00016">MiniballMidasConverter::ProcessBlockHeader()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>.</p>
 
@@ -1884,7 +1954,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00102">102</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00106">106</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00076">MiniballMidasConverter::ProcessBlockData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00016">MiniballMidasConverter::ProcessBlockHeader()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>.</p>
 
@@ -1910,7 +1980,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00104">104</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00108">108</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>.</p>
 
@@ -1936,7 +2006,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00103">103</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00107">107</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00016">MiniballMidasConverter::ProcessBlockHeader()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00218">MiniballMidasConverter::ProcessTraceData()</a>.</p>
 
@@ -1962,9 +2032,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00093">93</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00097">97</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="Converter_8hh_source.html#l00071">MiniballConverter::SourceOnly()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="Converter_8hh_source.html#l00075">MiniballConverter::SourceOnly()</a>.</p>
 
 </div>
 </div>
@@ -1988,7 +2058,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00191">191</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00195">195</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, and <a class="el" href="MedConverter_8cc_source.html#l00079">ProcessMesytecAdcData()</a>.</p>
 
@@ -2014,7 +2084,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00190">190</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00194">194</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, and <a class="el" href="MedConverter_8cc_source.html#l00079">ProcessMesytecAdcData()</a>.</p>
 
@@ -2040,7 +2110,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00189">189</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00193">193</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, and <a class="el" href="MedConverter_8cc_source.html#l00476">ProcessDgfData()</a>.</p>
 
@@ -2066,7 +2136,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00188">188</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00192">192</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, and <a class="el" href="MedConverter_8cc_source.html#l00476">ProcessDgfData()</a>.</p>
 
@@ -2092,7 +2162,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00194">194</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00198">198</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, and <a class="el" href="Converter_8cc_source.html#l00528">MiniballConverter::ResetHists()</a>.</p>
 
@@ -2118,7 +2188,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00183">183</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00187">187</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, and <a class="el" href="Converter_8cc_source.html#l00528">MiniballConverter::ResetHists()</a>.</p>
 
@@ -2144,7 +2214,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00195">195</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00199">199</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00218">MiniballMidasConverter::ProcessTraceData()</a>, and <a class="el" href="Converter_8cc_source.html#l00528">MiniballConverter::ResetHists()</a>.</p>
 
@@ -2170,7 +2240,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00184">184</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00188">188</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="Converter_8cc_source.html#l00528">MiniballConverter::ResetHists()</a>.</p>
 
@@ -2196,7 +2266,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00192">192</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00196">196</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, and <a class="el" href="Converter_8cc_source.html#l00528">MiniballConverter::ResetHists()</a>.</p>
 
@@ -2222,7 +2292,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00193">193</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00197">197</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, and <a class="el" href="Converter_8cc_source.html#l00528">MiniballConverter::ResetHists()</a>.</p>
 
@@ -2248,7 +2318,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00185">185</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00189">189</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="Converter_8cc_source.html#l00528">MiniballConverter::ResetHists()</a>.</p>
 
@@ -2274,7 +2344,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00186">186</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00190">190</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="Converter_8cc_source.html#l00528">MiniballConverter::ResetHists()</a>.</p>
 
@@ -2300,7 +2370,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00197">197</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00201">201</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>, and <a class="el" href="Converter_8cc_source.html#l00528">MiniballConverter::ResetHists()</a>.</p>
 
@@ -2326,7 +2396,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00158">158</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00162">162</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00105">MiniballConverter::MakeTree()</a>, <a class="el" href="MedConverter_8cc_source.html#l00476">ProcessDgfData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>.</p>
 
@@ -2352,9 +2422,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00177">177</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00181">181</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00896">MiniballMidasConverter::ConvertFile()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00899">MiniballMidasConverter::ConvertFile()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
 
 </div>
 </div>
@@ -2378,9 +2448,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00177">177</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00181">181</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00896">MiniballMidasConverter::ConvertFile()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00899">MiniballMidasConverter::ConvertFile()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
 
 </div>
 </div>
@@ -2404,7 +2474,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00143">143</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00147">147</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, <a class="el" href="MbsConverter_8hh_source.html#l00023">MiniballMbsConverter::MiniballMbsConverter()</a>, <a class="el" href="MedConverter_8hh_source.html#l00023">MiniballMedConverter()</a>, and <a class="el" href="MidasConverter_8hh_source.html#l00014">MiniballMidasConverter::MiniballMidasConverter()</a>.</p>
 
@@ -2456,7 +2526,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00153">153</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00157">157</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00747">ConvertFile()</a>, <a class="el" href="Converter_8cc_source.html#l00105">MiniballConverter::MakeTree()</a>, <a class="el" href="MedConverter_8cc_source.html#l00252">ProcessPatternUnitData()</a>, and <a class="el" href="MedConverter_8cc_source.html#l00313">ProcessScalerData()</a>.</p>
 
@@ -2482,9 +2552,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00167">167</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00171">171</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00561">MiniballConverter::BuildMbsIndex()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00747">ConvertFile()</a>, <a class="el" href="Converter_8hh_source.html#l00067">MiniballConverter::GetMbsInfo()</a>, and <a class="el" href="Converter_8cc_source.html#l00105">MiniballConverter::MakeTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00561">MiniballConverter::BuildMbsIndex()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00747">ConvertFile()</a>, <a class="el" href="Converter_8hh_source.html#l00071">MiniballConverter::GetMbsInfo()</a>, and <a class="el" href="Converter_8cc_source.html#l00105">MiniballConverter::MakeTree()</a>.</p>
 
 </div>
 </div>
@@ -2508,7 +2578,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00143">143</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00147">147</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8hh_source.html#l00023">MiniballMbsConverter::MiniballMbsConverter()</a>, <a class="el" href="MedConverter_8hh_source.html#l00023">MiniballMedConverter()</a>, and <a class="el" href="MidasConverter_8hh_source.html#l00014">MiniballMidasConverter::MiniballMidasConverter()</a>.</p>
 
@@ -2534,7 +2604,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00143">143</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00147">147</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8hh_source.html#l00023">MiniballMbsConverter::MiniballMbsConverter()</a>, <a class="el" href="MedConverter_8hh_source.html#l00023">MiniballMedConverter()</a>, and <a class="el" href="MidasConverter_8hh_source.html#l00014">MiniballMidasConverter::MiniballMidasConverter()</a>.</p>
 
@@ -2560,7 +2630,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00123">123</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00127">127</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>.</p>
 
@@ -2586,7 +2656,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00125">125</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00129">129</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>.</p>
 
@@ -2612,7 +2682,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00126">126</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00130">130</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, and <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>.</p>
 
@@ -2638,7 +2708,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00124">124</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00128">128</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>.</p>
 
@@ -2664,7 +2734,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00129">129</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00133">133</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00331">MiniballMbsConverter::GetFebexChanID()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00183">MiniballMidasConverter::GetFebexChanID()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00218">MiniballMidasConverter::ProcessTraceData()</a>.</p>
 
@@ -2690,7 +2760,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00130">130</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00134">134</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00331">MiniballMbsConverter::GetFebexChanID()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00183">MiniballMidasConverter::GetFebexChanID()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00218">MiniballMidasConverter::ProcessTraceData()</a>.</p>
 
@@ -2716,7 +2786,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00135">135</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00139">139</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>.</p>
 
@@ -2742,7 +2812,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00131">131</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00135">135</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00183">MiniballMidasConverter::GetFebexChanID()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>.</p>
 
@@ -2768,7 +2838,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00137">137</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00141">141</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>.</p>
 
@@ -2794,7 +2864,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00111">111</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00115">115</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00747">ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00476">ProcessDgfData()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>, <a class="el" href="MedConverter_8cc_source.html#l00079">ProcessMesytecAdcData()</a>, and <a class="el" href="MedConverter_8cc_source.html#l00252">ProcessPatternUnitData()</a>.</p>
 
@@ -2820,7 +2890,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00136">136</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00140">140</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00218">MiniballMidasConverter::ProcessTraceData()</a>.</p>
 
@@ -2846,7 +2916,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00107">107</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00111">111</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00747">ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00476">ProcessDgfData()</a>, and <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>.</p>
 
@@ -2872,7 +2942,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00133">133</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00137">137</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>.</p>
 
@@ -2898,7 +2968,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00120">120</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00124">124</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>.</p>
 
@@ -2924,7 +2994,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00117">117</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00121">121</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>.</p>
 
@@ -2950,7 +3020,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00134">134</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00138">138</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>.</p>
 
@@ -2976,7 +3046,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00128">128</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00132">132</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00331">MiniballMbsConverter::GetFebexChanID()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00183">MiniballMidasConverter::GetFebexChanID()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00218">MiniballMidasConverter::ProcessTraceData()</a>.</p>
 
@@ -3002,7 +3072,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00127">127</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00131">131</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00331">MiniballMbsConverter::GetFebexChanID()</a>.</p>
 
@@ -3028,7 +3098,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00122">122</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00126">126</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>.</p>
 
@@ -3054,7 +3124,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00108">108</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00112">112</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00218">MiniballMidasConverter::ProcessTraceData()</a>.</p>
 
@@ -3080,7 +3150,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00114">114</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00118">118</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00218">MiniballMidasConverter::ProcessTraceData()</a>.</p>
 
@@ -3106,7 +3176,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00112">112</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00116">116</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00218">MiniballMidasConverter::ProcessTraceData()</a>.</p>
 
@@ -3132,7 +3202,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00113">113</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00117">117</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00218">MiniballMidasConverter::ProcessTraceData()</a>.</p>
 
@@ -3158,7 +3228,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00132">132</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00136">136</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00331">MiniballMbsConverter::GetFebexChanID()</a>.</p>
 
@@ -3184,7 +3254,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00121">121</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00125">125</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00076">MiniballMidasConverter::ProcessBlockData()</a>.</p>
 
@@ -3236,7 +3306,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00140">140</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00144">144</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00218">MiniballMidasConverter::ProcessTraceData()</a>.</p>
 
@@ -3286,9 +3356,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00164">164</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00168">168</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00054">MiniballConverter::SetOutputDirectory()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00058">MiniballConverter::SetOutputDirectory()</a>.</p>
 
 </div>
 </div>
@@ -3312,9 +3382,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00165">165</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00169">169</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00056">MiniballConverter::CloseOutput()</a>, <a class="el" href="Converter_8hh_source.html#l00065">MiniballConverter::GetFile()</a>, <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, <a class="el" href="Converter_8cc_source.html#l00105">MiniballConverter::MakeTree()</a>, <a class="el" href="Converter_8hh_source.html#l00061">MiniballConverter::PurgeOutput()</a>, and <a class="el" href="Converter_8cc_source.html#l00095">MiniballConverter::SetOutput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00060">MiniballConverter::CloseOutput()</a>, <a class="el" href="Converter_8hh_source.html#l00069">MiniballConverter::GetFile()</a>, <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, <a class="el" href="Converter_8cc_source.html#l00105">MiniballConverter::MakeTree()</a>, <a class="el" href="Converter_8hh_source.html#l00065">MiniballConverter::PurgeOutput()</a>, and <a class="el" href="Converter_8cc_source.html#l00095">MiniballConverter::SetOutput()</a>.</p>
 
 </div>
 </div>
@@ -3338,9 +3408,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00214">214</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00218">218</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00083">MiniballConverter::AddProgressBar()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00747">ConvertFile()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00896">MiniballMidasConverter::ConvertFile()</a>, and <a class="el" href="Converter_8cc_source.html#l00571">MiniballConverter::SortTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00087">MiniballConverter::AddProgressBar()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00747">ConvertFile()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00899">MiniballMidasConverter::ConvertFile()</a>, and <a class="el" href="Converter_8cc_source.html#l00584">MiniballConverter::SortTree()</a>.</p>
 
 </div>
 </div>
@@ -3364,7 +3434,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00150">150</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00154">154</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>.</p>
 
@@ -3390,9 +3460,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00179">179</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00183">183</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00896">MiniballMidasConverter::ConvertFile()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00076">MiniballMidasConverter::ProcessBlockData()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00899">MiniballMidasConverter::ConvertFile()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00076">MiniballMidasConverter::ProcessBlockData()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3416,7 +3486,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00207">207</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00211">211</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00747">ConvertFile()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00331">MiniballMbsConverter::GetFebexChanID()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00183">MiniballMidasConverter::GetFebexChanID()</a>, <a class="el" href="Converter_8cc_source.html#l00134">MiniballConverter::MakeHists()</a>, <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, <a class="el" href="Converter_8cc_source.html#l00048">MiniballConverter::NewBuffer()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00076">MiniballMidasConverter::ProcessBlockData()</a>, <a class="el" href="MedConverter_8cc_source.html#l00476">ProcessDgfData()</a>, <a class="el" href="MedConverter_8cc_source.html#l00356">ProcessDgfScaler()</a>, <a class="el" href="MedConverter_8cc_source.html#l00004">ProcessEvent()</a>, <a class="el" href="MbsConverter_8cc_source.html#l00054">MiniballMbsConverter::ProcessFebexData()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>, <a class="el" href="MedConverter_8cc_source.html#l00079">ProcessMesytecAdcData()</a>, <a class="el" href="MedConverter_8cc_source.html#l00252">ProcessPatternUnitData()</a>, <a class="el" href="Converter_8cc_source.html#l00528">MiniballConverter::ResetHists()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
 
@@ -3442,9 +3512,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00166">166</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00170">170</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00068">MiniballConverter::GetSortedTree()</a>, <a class="el" href="Converter_8cc_source.html#l00105">MiniballConverter::MakeTree()</a>, and <a class="el" href="Converter_8cc_source.html#l00571">MiniballConverter::SortTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Converter_8hh_source.html#l00072">MiniballConverter::GetSortedTree()</a>, <a class="el" href="Converter_8cc_source.html#l00105">MiniballConverter::MakeTree()</a>, and <a class="el" href="Converter_8cc_source.html#l00584">MiniballConverter::SortTree()</a>.</p>
 
 </div>
 </div>
@@ -3468,9 +3538,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00096">96</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00100">100</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00747">ConvertFile()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00896">MiniballMidasConverter::ConvertFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00472">MiniballMbsConverter::ConvertFile()</a>, <a class="el" href="MedConverter_8cc_source.html#l00747">ConvertFile()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00899">MiniballMidasConverter::ConvertFile()</a>.</p>
 
 </div>
 </div>
@@ -3494,7 +3564,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00109">109</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00113">113</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>.</p>
 
@@ -3520,7 +3590,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00116">116</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00120">120</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>.</p>
 
@@ -3546,7 +3616,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00115">115</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00119">119</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00712">MiniballMidasConverter::ProcessInfoData()</a>.</p>
 
@@ -3572,7 +3642,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00202">202</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00206">206</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
 
@@ -3598,7 +3668,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00203">203</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00207">207</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
 
@@ -3624,7 +3694,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00201">201</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00205">205</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00004">MiniballConverter::MiniballConverter()</a>, and <a class="el" href="MidasConverter_8cc_source.html#l00299">MiniballMidasConverter::ProcessFebexData()</a>.</p>
 
@@ -3650,9 +3720,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00177">177</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00181">181</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00896">MiniballMidasConverter::ConvertFile()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MidasConverter_8cc_source.html#l00899">MiniballMidasConverter::ConvertFile()</a>, <a class="el" href="MidasConverter_8cc_source.html#l00428">MiniballMidasConverter::FinishFebexData()</a>, and <a class="el" href="Converter_8cc_source.html#l00059">MiniballConverter::StartFile()</a>.</p>
 
 </div>
 </div>
@@ -3676,9 +3746,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00154">154</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Converter_8hh_source.html#l00158">158</a> of file <a class="el" href="Converter_8hh_source.html">Converter.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00105">MiniballConverter::MakeTree()</a>, <a class="el" href="MedConverter_8cc_source.html#l00476">ProcessDgfData()</a>, <a class="el" href="MedConverter_8cc_source.html#l00079">ProcessMesytecAdcData()</a>, and <a class="el" href="Converter_8cc_source.html#l00571">MiniballConverter::SortTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MbsConverter_8cc_source.html#l00374">MiniballMbsConverter::FinishFebexData()</a>, <a class="el" href="Converter_8cc_source.html#l00105">MiniballConverter::MakeTree()</a>, <a class="el" href="MedConverter_8cc_source.html#l00476">ProcessDgfData()</a>, <a class="el" href="MedConverter_8cc_source.html#l00079">ProcessMesytecAdcData()</a>, and <a class="el" href="Converter_8cc_source.html#l00584">MiniballConverter::SortTree()</a>.</p>
 
 </div>
 </div>
