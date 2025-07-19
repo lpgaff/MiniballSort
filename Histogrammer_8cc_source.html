@@ -125,7 +125,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    TH1::SetDefaultSumw2(kTRUE);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// Histogrammer options</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    TH1::AddDirectory(kFALSE);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">//TH1::AddDirectory(kFALSE);</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
 </div>
@@ -3362,7 +3362,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03241" name="l03241"></a><span class="lineno"> 3241</span>    } <span class="comment">// all events</span></div>
 <div class="line"><a id="l03242" name="l03242"></a><span class="lineno"> 3242</span>    </div>
 <div class="line"><a id="l03243" name="l03243"></a><span class="lineno"> 3243</span>    <a class="code hl_variable" href="classMiniballHistogrammer.html#a441963f72ec7cee806290a86289c41c9">output_file</a>-&gt;Write( <span class="keyword">nullptr</span>, TObject::kOverwrite );</div>
-<div class="line"><a id="l03244" name="l03244"></a><span class="lineno"> 3244</span>    <a class="code hl_variable" href="classMiniballHistogrammer.html#a441963f72ec7cee806290a86289c41c9">output_file</a>-&gt;Purge(2);</div>
+<div class="line"><a id="l03244" name="l03244"></a><span class="lineno"> 3244</span>    <span class="comment">//output_file-&gt;Purge(2);</span></div>
 <div class="line"><a id="l03245" name="l03245"></a><span class="lineno"> 3245</span>    </div>
 <div class="line"><a id="l03246" name="l03246"></a><span class="lineno"> 3246</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classMiniballHistogrammer.html#a9dfaf13c6bc1001800b0fc22bec78c10">n_entries</a>;</div>
 <div class="line"><a id="l03247" name="l03247"></a><span class="lineno"> 3247</span>    </div>
