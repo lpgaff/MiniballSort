@@ -1073,7 +1073,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> ) {</div>
 <div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span> </div>
 <div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>        <span class="comment">// Register signal and signal handler for DataSpy only</span></div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>        signal( SIGINT, <a class="code hl_function" href="mb__sort_8cc.html#a89a8322bea357674e81ba9cbdefe0378">signal_callback_handler</a> );</div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>        std::signal( SIGINT, <a class="code hl_function" href="mb__sort_8cc.html#a89a8322bea357674e81ba9cbdefe0378">signal_callback_handler</a> );</div>
 <div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span> </div>
 <div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>        <a class="code hl_variable" href="mb__sort_8cc.html#ab52794e1af93cf9b7af34444c197cc28">flag_monitor</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>        <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a> &lt; 0 ) <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a> = 30;</div>
