@@ -482,7 +482,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>                    TTree *evt_tree = <a class="code hl_variable" href="mb__sort_8cc.html#a6df83697090809af382300c77665d66c">eb_mon</a>-&gt;GetTree()-&gt;CloneTree();</div>
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>                    <a class="code hl_variable" href="mb__sort_8cc.html#a342b1437da6701a2e83d331624194297">hist_mon</a>-&gt;SetInputTree( evt_tree );</div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>                    <a class="code hl_variable" href="mb__sort_8cc.html#a342b1437da6701a2e83d331624194297">hist_mon</a>-&gt;FillHists();</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                    <span class="comment">//hist_mon-&gt;PurgeOutput();</span></div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                    <a class="code hl_variable" href="mb__sort_8cc.html#a342b1437da6701a2e83d331624194297">hist_mon</a>-&gt;PurgeOutput();</div>
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                    <span class="keyword">delete</span> evt_tree;</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                }</div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                </div>
