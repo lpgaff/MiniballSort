@@ -131,7 +131,7 @@ var searchData=
   ['costheta_128',['CosTheta',['../classMiniballReaction.html#aa8f3b8ac3f54c0fe0412582c777c9d1e',1,'MiniballReaction::CosTheta(std::shared_ptr&lt; GammaRayEvt &gt; g, bool ejectile)'],['../classMiniballReaction.html#af9f2d3b78fad603f97817c7cf840afc6',1,'MiniballReaction::CosTheta(std::shared_ptr&lt; SpedeEvt &gt; s, bool ejectile)']]],
   ['crateid_129',['crateid',['../classMBSSubEvent.html#a3b9de60963d4201c1598f5ca8b5c4185',1,'MBSSubEvent::crateid'],['../classMBS.html#af0708415842c88f7ae8aa3958d5b36c6',1,'MBS::crateid']]],
   ['cry_130',['cry',['../classGammaRayEvt.html#a220152a4f50e0651a3b884a6c90df9e5',1,'GammaRayEvt']]],
-  ['cspy_131',['cspy',['../classMiniballHistogrammer.html#af233a4b0e421dc66c3bc3da8f86481a6',1,'MiniballHistogrammer::cspy'],['../mb__sort_8cc.html#a519d36318ab7e34cc8ad543d167b519d',1,'cspy:&#160;mb_sort.cc']]],
+  ['cspy_131',['cspy',['../classMiniballHistogrammer.html#af233a4b0e421dc66c3bc3da8f86481a6',1,'MiniballHistogrammer::cspy'],['../structthptr.html#a6cde83e5a775d5e74f2938eebc75c29e',1,'thptr::cspy'],['../mb__sort_8cc.html#a519d36318ab7e34cc8ad543d167b519d',1,'cspy:&#160;mb_sort.cc']]],
   ['ctr_5fcaen_5fhit_132',['ctr_caen_hit',['../classMiniballConverter.html#a5f188d4e18d02f72b6c9416822e63bba',1,'MiniballConverter']]],
   ['ctr_5fdgf_5fhit_133',['ctr_dgf_hit',['../classMiniballConverter.html#a16d84b942bad021029730ad772d5162d',1,'MiniballConverter']]],
   ['ctr_5ffebex_5fhit_134',['ctr_febex_hit',['../classMiniballConverter.html#ac3e13b2317bc71e6d284edc16a4196ad',1,'MiniballConverter']]],

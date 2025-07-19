@@ -4,7 +4,7 @@ var searchData=
   ['particlefinder_1',['ParticleFinder',['../classMiniballEventBuilder.html#a4ad93183f801ca389c834dc755dfdd35',1,'MiniballEventBuilder']]],
   ['patternunitdata_2',['PatternUnitData',['../classPatternUnitData.html#a46baa6e0d85de20722edef41fafd6a95',1,'PatternUnitData::PatternUnitData(unsigned char _mod, unsigned char _id, unsigned int _val)'],['../classPatternUnitData.html#a651b4a06fa13d8d016aa7b7345a4f15b',1,'PatternUnitData::PatternUnitData()']]],
   ['plot_5fphysics_5fhists_3',['plot_physics_hists',['../mb__sort_8cc.html#a5dabe0809e60f3d90feccda0d9d4a687',1,'plot_physics_hists():&#160;mb_sort.cc'],['../mb__sort_8hh.html#a5dabe0809e60f3d90feccda0d9d4a687',1,'plot_physics_hists():&#160;mb_sort.cc']]],
-  ['plotphysicshists_4',['PlotPhysicsHists',['../classMiniballHistogrammer.html#a2fb3b386deb4c705808e73cb90e5c22d',1,'MiniballHistogrammer::PlotPhysicsHists()'],['../MonitorMacros_8hh.html#a4f4b43d6973477faa255818268bf3654',1,'PlotPhysicsHists():&#160;MonitorMacros.hh']]],
+  ['plotphysicshists_4',['PlotPhysicsHists',['../classMiniballHistogrammer.html#a27b0add675a50694f8cfe62c55000361',1,'MiniballHistogrammer::PlotPhysicsHists()'],['../MonitorMacros_8hh.html#a4f4b43d6973477faa255818268bf3654',1,'PlotPhysicsHists():&#160;MonitorMacros.hh']]],
   ['printcalibration_5',['PrintCalibration',['../classMiniballCalibration.html#a7ab1f7371eaf7910df06773da9082dc2',1,'MiniballCalibration']]],
   ['printreaction_6',['PrintReaction',['../classMiniballReaction.html#a6c75a66467e1b734969006e6e577f1d4',1,'MiniballReaction']]],
   ['printsettings_7',['PrintSettings',['../classMiniballSettings.html#a3ca8702cd98473277f417dfeb6c5f5b5',1,'MiniballSettings']]],
