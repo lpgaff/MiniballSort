@@ -1909,7 +1909,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01801" name="l01801"></a><span class="lineno"> 1801</span>            TIter keyList2( ( (TDirectory*)key1-&gt;ReadObj() )-&gt;GetListOfKeys() );</div>
 <div class="line"><a id="l01802" name="l01802"></a><span class="lineno"> 1802</span>            <span class="keywordflow">while</span>( ( key2 = (TKey*)keyList2() ) ){ <span class="comment">// level 2</span></div>
 <div class="line"><a id="l01803" name="l01803"></a><span class="lineno"> 1803</span> </div>
-<div class="line"><a id="l01804" name="l01804"></a><span class="lineno"> 1804</span>                <span class="keywordflow">if</span>( key1-&gt;ReadObj()-&gt;InheritsFrom(<span class="stringliteral">&quot;TDirectory&quot;</span>) ){</div>
+<div class="line"><a id="l01804" name="l01804"></a><span class="lineno"> 1804</span>                <span class="keywordflow">if</span>( key2-&gt;ReadObj()-&gt;InheritsFrom(<span class="stringliteral">&quot;TDirectory&quot;</span>) ){</div>
 <div class="line"><a id="l01805" name="l01805"></a><span class="lineno"> 1805</span> </div>
 <div class="line"><a id="l01806" name="l01806"></a><span class="lineno"> 1806</span>                    TIter keyList3( ( (TDirectory*)key2-&gt;ReadObj() )-&gt;GetListOfKeys() );</div>
 <div class="line"><a id="l01807" name="l01807"></a><span class="lineno"> 1807</span>                    <span class="keywordflow">while</span>( ( key3 = (TKey*)keyList3() ) ) <span class="comment">// level 3</span></div>
