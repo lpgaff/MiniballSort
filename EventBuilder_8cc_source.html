@@ -605,7 +605,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>    <a class="code hl_variable" href="classMiniballEventBuilder.html#adc9b35137f64335ce5db2fc2d1c6640f">hists_ready</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span> </div>
 <div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span>    <span class="comment">// Write once</span></div>
-<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>    <a class="code hl_variable" href="classMiniballEventBuilder.html#ade9a0c31aab5a32321a54a8d694e5540">output_file</a>-&gt;Write();</div>
+<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>    <span class="comment">//output_file-&gt;Write();</span></div>
 <div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span> </div>
 <div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>    </div>
@@ -618,10 +618,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span> </div>
 <div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>    <span class="keywordflow">if</span>( obj == <span class="keyword">nullptr</span> ) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span> </div>
-<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>    <span class="keywordflow">if</span>( obj-&gt;InheritsFrom( <span class="stringliteral">&quot;TH1&quot;</span> ) )</div>
-<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>        ( (TH1*)obj )-&gt;Reset(<span class="stringliteral">&quot;ICESM&quot;</span>);</div>
-<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( obj-&gt;InheritsFrom( <span class="stringliteral">&quot;TH2&quot;</span> ) )</div>
-<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>        ( (TH2*)obj )-&gt;Reset(<span class="stringliteral">&quot;ICESM&quot;</span>);</div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>    <span class="keywordflow">if</span>( obj-&gt;InheritsFrom( <span class="stringliteral">&quot;TH2&quot;</span> ) )</div>
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>        ( (TH2*)obj )-&gt;Reset(<span class="stringliteral">&quot;ICESM&quot;</span>);</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( obj-&gt;InheritsFrom( <span class="stringliteral">&quot;TH1&quot;</span> ) )</div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>        ( (TH1*)obj )-&gt;Reset(<span class="stringliteral">&quot;ICESM&quot;</span>);</div>
 <div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span> </div>
 <div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span> </div>
@@ -633,7 +633,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00520" name="l00520"></a><span class="lineno"><a class="line" href="classMiniballEventBuilder.html#a02ca88329532b5383c57d564cae9887d">  520</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classMiniballEventBuilder.html#a02ca88329532b5383c57d564cae9887d">MiniballEventBuilder::ResetHists</a>(){</div>
 <div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span> </div>
 <div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>    TKey *key1, *key2, *key3;</div>
-<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>    TIter keyList1( <a class="code hl_variable" href="classMiniballEventBuilder.html#ade9a0c31aab5a32321a54a8d694e5540">output_file</a>-&gt;GetListOfKeys() );</div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>    TIter keyList1( gDirectory-&gt;GetListOfKeys() );</div>
 <div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>    <span class="keywordflow">while</span>( ( key1 = (TKey*)keyList1() ) ){ <span class="comment">// level 1</span></div>
 <div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span> </div>
 <div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>        <span class="keywordflow">if</span>( key1-&gt;ReadObj()-&gt;InheritsFrom(<span class="stringliteral">&quot;TDirectory&quot;</span>) ){</div>
