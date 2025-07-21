@@ -399,7 +399,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                <span class="keywordtype">int</span> block_ctr = 0;</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                <span class="keywordtype">long</span> byte_ctr = 0;</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                <span class="keywordtype">int</span> poll_ctr = 0;</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                <span class="keywordflow">while</span>( block_ctr &lt; 256 &amp;&amp; poll_ctr &lt; 1000 * <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a> / wait_time ){</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                <span class="keywordflow">while</span>( block_ctr &lt; 1024 &amp;&amp; poll_ctr &lt; 1000 * <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a> / wait_time ){</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                    <span class="comment">//std::cout &lt;&lt; &quot;Got &quot; &lt;&lt; spy_length &lt;&lt; &quot; bytes of data from DataSpy&quot; &lt;&lt; std::endl;</span></div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                    <span class="keywordflow">if</span>( spy_length &gt; 0 ) {</div>
