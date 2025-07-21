@@ -31,7 +31,7 @@ var searchData=
   ['resetall_28',['ResetAll',['../MonitorMacros_8hh.html#a1ffeffc17cf41e154bc2a7b4424740f3',1,'MonitorMacros.hh']]],
   ['resetconv_29',['ResetConv',['../MonitorMacros_8hh.html#a5ea6b0f7d746ae62119896e63a4ad505',1,'MonitorMacros.hh']]],
   ['resetevnt_30',['ResetEvnt',['../MonitorMacros_8hh.html#a37429ed656e2e700437a5c31548cf786',1,'MonitorMacros.hh']]],
-  ['resethist_31',['ResetHist',['../classMiniballConverter.html#a3299d21b0231ba743edae111c1deb696',1,'MiniballConverter::ResetHist()'],['../classMiniballEventBuilder.html#a67ef6ca1447f5e6331fe4b04fa40dcf7',1,'MiniballEventBuilder::ResetHist()'],['../classMiniballHistogrammer.html#a1decf676b033644c70876313f8037251',1,'MiniballHistogrammer::ResetHist()'],['../MonitorMacros_8hh.html#a71611bf546bc909498b39b71e6f876ef',1,'ResetHist():&#160;MonitorMacros.hh']]],
+  ['resethist_31',['ResetHist',['../MonitorMacros_8hh.html#a71611bf546bc909498b39b71e6f876ef',1,'MonitorMacros.hh']]],
   ['resethists_32',['ResetHists',['../classMiniballConverter.html#a3d55c170ea1606bb5a1896c750eac5d0',1,'MiniballConverter::ResetHists()'],['../classMiniballEventBuilder.html#a02ca88329532b5383c57d564cae9887d',1,'MiniballEventBuilder::ResetHists()'],['../classMiniballHistogrammer.html#a13174bea274f723f2909ca72e211bc96',1,'MiniballHistogrammer::ResetHists()']]],
   ['resethitcount_33',['ResetHitCount',['../classMBS.html#ad58e9cc64a7efb2261ee76603c29569a',1,'MBS']]],
   ['resethits_34',['ResetHits',['../classMBSBufferElem.html#a5dc72d92baf2c1ae6c63ae042c274035',1,'MBSBufferElem']]],
