@@ -8,5 +8,6 @@ var searchData=
   ['eventsgammacoresegmentenergydifference_5',['EventsGammaCoreSegmentEnergyDifference',['../classMiniballReaction.html#ae653a3c984cbbafd3e20fc2d03b847b0',1,'MiniballReaction']]],
   ['eventsgammademandsegment_6',['EventsGammaDemandSegment',['../classMiniballReaction.html#a3bd55b3ab73b0c7f8e3a1c9755f9e861',1,'MiniballReaction']]],
   ['eventsgammamaxsegmentmultiplicity_7',['EventsGammaMaxSegmentMultiplicity',['../classMiniballReaction.html#acfcc4c4182e39f31da6ad69aa6724f22',1,'MiniballReaction']]],
-  ['eventsparticlegammaonly_8',['EventsParticleGammaOnly',['../classMiniballReaction.html#ac3e6ed977543da3dd6e278d7dc0451f7',1,'MiniballReaction']]]
+  ['eventsgammasegmentenergy_8',['EventsGammaSegmentEnergy',['../classMiniballReaction.html#a0e82aed790af6bf77e459a1f5633e30d',1,'MiniballReaction']]],
+  ['eventsparticlegammaonly_9',['EventsParticleGammaOnly',['../classMiniballReaction.html#ac3e6ed977543da3dd6e278d7dc0451f7',1,'MiniballReaction']]]
 ];
