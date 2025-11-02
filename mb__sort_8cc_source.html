@@ -1004,425 +1004,433 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>    std::vector&lt;std::string&gt; name_hist_files;</div>
 <div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span> </div>
 <div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>    <span class="comment">// Update calibration file if given</span></div>
-<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#af9f81236e86fb558e6611a3921cb01c3">overwrite_cal</a> ) cdcal.<a class="code hl_function" href="classMiniballCDCalibrator.html#abd01542fccf980bcb16884bec3482eea">AddCalibration</a>( <a class="code hl_variable" href="mb__sort_8cc.html#ab5fd96c56d1642cfe7d428e1aa0ac9d8">mycal</a> );</div>
-<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span> </div>
-<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>    <span class="comment">// We are going to chain all the event files now</span></div>
-<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>    <span class="keywordflow">for</span>( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size(); i++ ){</div>
+<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#af9f81236e86fb558e6611a3921cb01c3">overwrite_cal</a> )</div>
+<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>        cdcal.<a class="code hl_function" href="classMiniballCDCalibrator.html#abd01542fccf980bcb16884bec3482eea">AddCalibration</a>( <a class="code hl_variable" href="mb__sort_8cc.html#ab5fd96c56d1642cfe7d428e1aa0ac9d8">mycal</a> );</div>
+<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span> </div>
+<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>    <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span> </div>
-<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>        name_input_file = <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(i).substr( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(i).find_last_of(<span class="stringliteral">&quot;/&quot;</span>)+1,</div>
-<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>                                                   <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(i).length() - <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(i).find_last_of(<span class="stringliteral">&quot;/&quot;</span>)-1 );</div>
-<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>        name_input_file = name_input_file.substr( 0,</div>
-<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>                                                 name_input_file.find_last_of(<span class="stringliteral">&quot;.&quot;</span>) );</div>
-<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>        name_input_file = <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> + <span class="stringliteral">&quot;/&quot;</span> + name_input_file + <span class="stringliteral">&quot;.root&quot;</span>;</div>
-<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span> </div>
-<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>        ftest.open( name_input_file.data() );</div>
-<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>        <span class="keywordflow">if</span>( !ftest.is_open() ) {</div>
-<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span> </div>
-<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>            std::cerr &lt;&lt; name_input_file &lt;&lt; <span class="stringliteral">&quot; does not exist&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span> </div>
-<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>        }</div>
-<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>        <span class="keywordflow">else</span> ftest.close();</div>
-<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span> </div>
-<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>        name_hist_files.push_back( name_input_file );</div>
+<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Please provide a calibration file to run cdcal... Exiting;&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span> </div>
+<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>    }</div>
+<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span> </div>
+<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>    <span class="comment">// We are going to chain all the event files now</span></div>
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>    <span class="keywordflow">for</span>( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size(); i++ ){</div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span> </div>
+<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>        name_input_file = <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(i).substr( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(i).find_last_of(<span class="stringliteral">&quot;/&quot;</span>)+1,</div>
+<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>                                                   <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(i).length() - <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(i).find_last_of(<span class="stringliteral">&quot;/&quot;</span>)-1 );</div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>        name_input_file = name_input_file.substr( 0,</div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>                                                 name_input_file.find_last_of(<span class="stringliteral">&quot;.&quot;</span>) );</div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>        name_input_file = <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> + <span class="stringliteral">&quot;/&quot;</span> + name_input_file + <span class="stringliteral">&quot;.root&quot;</span>;</div>
+<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span> </div>
+<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>        ftest.open( name_input_file.data() );</div>
+<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>        <span class="keywordflow">if</span>( !ftest.is_open() ) {</div>
 <div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span> </div>
-<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>    }</div>
-<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span> </div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>    <span class="comment">// Only do something if there are valid files</span></div>
-<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>    <span class="keywordflow">if</span>( name_hist_files.size() ) {</div>
-<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span> </div>
-<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>        cdcal.<a class="code hl_function" href="classMiniballCDCalibrator.html#ab654a0ff479b55845e582688e030272e">SetOutput</a>( <a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a> );</div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>        cdcal.<a class="code hl_function" href="classMiniballCDCalibrator.html#a9c8d831eaf79862fc573cadd1f6ee851">SetInputFile</a>( name_hist_files );</div>
-<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>        cdcal.<a class="code hl_function" href="classMiniballCDCalibrator.html#a878621884de3149f9a804dff5aa82655">FillHists</a>();</div>
-<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>        cdcal.<a class="code hl_function" href="classMiniballCDCalibrator.html#af90f9abf84486e8950ad110b6a72fd6f">CloseOutput</a>();</div>
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>            std::cerr &lt;&lt; name_input_file &lt;&lt; <span class="stringliteral">&quot; does not exist&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span> </div>
+<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>        }</div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>        <span class="keywordflow">else</span> ftest.close();</div>
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span> </div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>        name_hist_files.push_back( name_input_file );</div>
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span> </div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>    }</div>
 <div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span> </div>
-<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    }</div>
-<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span> </div>
-<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span> </div>
-<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>}</div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    <span class="comment">// Only do something if there are valid files</span></div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>    <span class="keywordflow">if</span>( name_hist_files.size() ) {</div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span> </div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>        cdcal.<a class="code hl_function" href="classMiniballCDCalibrator.html#ab654a0ff479b55845e582688e030272e">SetOutput</a>( <a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a> );</div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>        cdcal.<a class="code hl_function" href="classMiniballCDCalibrator.html#a9c8d831eaf79862fc573cadd1f6ee851">SetInputFile</a>( name_hist_files );</div>
+<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>        cdcal.<a class="code hl_function" href="classMiniballCDCalibrator.html#a878621884de3149f9a804dff5aa82655">FillHists</a>();</div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>        cdcal.<a class="code hl_function" href="classMiniballCDCalibrator.html#af90f9abf84486e8950ad110b6a72fd6f">CloseOutput</a>();</div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span> </div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>    }</div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span> </div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span> </div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>}</div>
 </div>
-<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span> </div>
-<div class="foldopen" id="foldopen00925" data-start="{" data-end="}">
-<div class="line"><a id="l00925" name="l00925"></a><span class="lineno"><a class="line" href="mb__sort_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">  925</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="mb__sort_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[] ){</div>
-<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>    </div>
-<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>    <span class="comment">// Command line interface, stolen from MiniballCoulexSort</span></div>
-<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>    std::unique_ptr&lt;CommandLineInterface&gt; <span class="keyword">interface </span>= std::make_unique&lt;<a class="code hl_class" href="classCommandLineInterface.html">CommandLineInterface</a>&gt;();</div>
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span> </div>
-<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>    interface-&gt;<a class="code hl_function" href="classCommandLineInterface.html#a7c2c2753fa255f169868cda2427dca09">Add</a>(<span class="stringliteral">&quot;-i&quot;</span>, <span class="stringliteral">&quot;List of input files&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a> );</div>
-<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>    interface-&gt;Add(<span class="stringliteral">&quot;-o&quot;</span>, <span class="stringliteral">&quot;Output file for histogram file&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a> );</div>
-<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>    interface-&gt;Add(<span class="stringliteral">&quot;-s&quot;</span>, <span class="stringliteral">&quot;Settings file&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a> );</div>
-<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>    interface-&gt;Add(<span class="stringliteral">&quot;-c&quot;</span>, <span class="stringliteral">&quot;Calibration file&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a> );</div>
-<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>    interface-&gt;Add(<span class="stringliteral">&quot;-r&quot;</span>, <span class="stringliteral">&quot;Reaction file&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a> );</div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>    interface-&gt;Add(<span class="stringliteral">&quot;-f&quot;</span>, <span class="stringliteral">&quot;Flag to force new ROOT conversion&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a985fef1e481004770256d46745047e88">flag_convert</a> );</div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>    interface-&gt;Add(<span class="stringliteral">&quot;-e&quot;</span>, <span class="stringliteral">&quot;Flag to force new event builder (new calibration)&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a105a04c58bd21374ef7ac2c2979808c8">flag_events</a> );</div>
-<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>    interface-&gt;Add(<span class="stringliteral">&quot;-source&quot;</span>, <span class="stringliteral">&quot;Flag to define an source only run&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#adb73828698a0a12204817ca52b87306d">flag_source</a> );</div>
-<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>    interface-&gt;Add(<span class="stringliteral">&quot;-ebis&quot;</span>, <span class="stringliteral">&quot;Flag to define an EBIS only run, discarding data &gt;4ms after an EBIS event&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a55503ff77225231612ee8ea3b3fdc563">flag_ebis</a> );</div>
-<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>    interface-&gt;Add(<span class="stringliteral">&quot;-midas&quot;</span>, <span class="stringliteral">&quot;Flag to define input as MIDAS data type (FEBEX with Daresbury firmware - default)&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a419cbacf69871b965bcdd6e559b97d5f">flag_midas</a> );</div>
-<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>    interface-&gt;Add(<span class="stringliteral">&quot;-mbs&quot;</span>, <span class="stringliteral">&quot;Flag to define input as MBS data type (FEBEX with GSI firmware)&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a653a6d35034a5c68ea5c79a88cd35837">flag_mbs</a> );</div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>    interface-&gt;Add(<span class="stringliteral">&quot;-med&quot;</span>, <span class="stringliteral">&quot;Flag to define input as MED data type (DGF and MADC)&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> );</div>
-<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>    interface-&gt;Add(<span class="stringliteral">&quot;-anglefit&quot;</span>, <span class="stringliteral">&quot;Flag to run the angle fit&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a565a79df3255da68969d1ebe0769cfcd">flag_angle_fit</a> );</div>
-<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>    interface-&gt;Add(<span class="stringliteral">&quot;-angledata&quot;</span>, <span class="stringliteral">&quot;File containing 22Ne segment energies&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#aa1c29a75f97d71eea90245a0d3879fd1">name_angle_file</a> );</div>
-<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>    interface-&gt;Add(<span class="stringliteral">&quot;-cdcal&quot;</span>, <span class="stringliteral">&quot;Flag to make the CD calibration plots&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#af8e3847388e79ddb193de785d2953fd4">flag_cdcal</a> );</div>
-<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>    interface-&gt;Add(<span class="stringliteral">&quot;-spy&quot;</span>, <span class="stringliteral">&quot;Flag to run the DataSpy&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> );</div>
-<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>    interface-&gt;Add(<span class="stringliteral">&quot;-spyhists&quot;</span>, <span class="stringliteral">&quot;File containing histograms for monitoring in the spy&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a9c47c2546e083731399d4357c4962c71">spy_hists_file</a> );</div>
-<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>    interface-&gt;Add(<span class="stringliteral">&quot;-m&quot;</span>, <span class="stringliteral">&quot;Monitor input file every X seconds&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a> );</div>
-<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>    interface-&gt;Add(<span class="stringliteral">&quot;-p&quot;</span>, <span class="stringliteral">&quot;Port number for web server (default 8030)&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a61b9e2a604e69f931450c0996867e5b8">port_num</a> );</div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>    interface-&gt;Add(<span class="stringliteral">&quot;-d&quot;</span>, <span class="stringliteral">&quot;Directory to put the sorted data default is /path/to/data/sorted&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> );</div>
-<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>    interface-&gt;Add(<span class="stringliteral">&quot;-g&quot;</span>, <span class="stringliteral">&quot;Launch the GUI&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a3570c7473853b430e9fab3b030ac450b">gui_flag</a> );</div>
-<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>    interface-&gt;Add(<span class="stringliteral">&quot;-h&quot;</span>, <span class="stringliteral">&quot;Print this help&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a47a15d53605fd7375635b3265f6d0ff2">help_flag</a> );</div>
-<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span> </div>
-<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>    interface-&gt;CheckFlags( argc, argv );</div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a47a15d53605fd7375635b3265f6d0ff2">help_flag</a> ) {</div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>        </div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>        interface-&gt;CheckFlags( 1, argv );</div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>        </div>
-<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>    }</div>
-<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>    </div>
-<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>    <span class="comment">// If we are launching the GUI</span></div>
-<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a3570c7473853b430e9fab3b030ac450b">gui_flag</a> || argc == 1 ) {</div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span> </div>
+<div class="foldopen" id="foldopen00933" data-start="{" data-end="}">
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno"><a class="line" href="mb__sort_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">  933</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="mb__sort_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[] ){</div>
+<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>    </div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>    <span class="comment">// Command line interface, stolen from MiniballCoulexSort</span></div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>    std::unique_ptr&lt;CommandLineInterface&gt; <span class="keyword">interface </span>= std::make_unique&lt;<a class="code hl_class" href="classCommandLineInterface.html">CommandLineInterface</a>&gt;();</div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span> </div>
+<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>    interface-&gt;<a class="code hl_function" href="classCommandLineInterface.html#a7c2c2753fa255f169868cda2427dca09">Add</a>(<span class="stringliteral">&quot;-i&quot;</span>, <span class="stringliteral">&quot;List of input files&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a> );</div>
+<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>    interface-&gt;Add(<span class="stringliteral">&quot;-o&quot;</span>, <span class="stringliteral">&quot;Output file for histogram file&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a> );</div>
+<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>    interface-&gt;Add(<span class="stringliteral">&quot;-s&quot;</span>, <span class="stringliteral">&quot;Settings file&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a> );</div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>    interface-&gt;Add(<span class="stringliteral">&quot;-c&quot;</span>, <span class="stringliteral">&quot;Calibration file&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a> );</div>
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>    interface-&gt;Add(<span class="stringliteral">&quot;-r&quot;</span>, <span class="stringliteral">&quot;Reaction file&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a> );</div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>    interface-&gt;Add(<span class="stringliteral">&quot;-f&quot;</span>, <span class="stringliteral">&quot;Flag to force new ROOT conversion&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a985fef1e481004770256d46745047e88">flag_convert</a> );</div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>    interface-&gt;Add(<span class="stringliteral">&quot;-e&quot;</span>, <span class="stringliteral">&quot;Flag to force new event builder (new calibration)&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a105a04c58bd21374ef7ac2c2979808c8">flag_events</a> );</div>
+<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>    interface-&gt;Add(<span class="stringliteral">&quot;-source&quot;</span>, <span class="stringliteral">&quot;Flag to define an source only run&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#adb73828698a0a12204817ca52b87306d">flag_source</a> );</div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>    interface-&gt;Add(<span class="stringliteral">&quot;-ebis&quot;</span>, <span class="stringliteral">&quot;Flag to define an EBIS only run, discarding data &gt;4ms after an EBIS event&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a55503ff77225231612ee8ea3b3fdc563">flag_ebis</a> );</div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>    interface-&gt;Add(<span class="stringliteral">&quot;-midas&quot;</span>, <span class="stringliteral">&quot;Flag to define input as MIDAS data type (FEBEX with Daresbury firmware - default)&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a419cbacf69871b965bcdd6e559b97d5f">flag_midas</a> );</div>
+<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>    interface-&gt;Add(<span class="stringliteral">&quot;-mbs&quot;</span>, <span class="stringliteral">&quot;Flag to define input as MBS data type (FEBEX with GSI firmware)&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a653a6d35034a5c68ea5c79a88cd35837">flag_mbs</a> );</div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>    interface-&gt;Add(<span class="stringliteral">&quot;-med&quot;</span>, <span class="stringliteral">&quot;Flag to define input as MED data type (DGF and MADC)&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> );</div>
+<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>    interface-&gt;Add(<span class="stringliteral">&quot;-anglefit&quot;</span>, <span class="stringliteral">&quot;Flag to run the angle fit&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a565a79df3255da68969d1ebe0769cfcd">flag_angle_fit</a> );</div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>    interface-&gt;Add(<span class="stringliteral">&quot;-angledata&quot;</span>, <span class="stringliteral">&quot;File containing 22Ne segment energies&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#aa1c29a75f97d71eea90245a0d3879fd1">name_angle_file</a> );</div>
+<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>    interface-&gt;Add(<span class="stringliteral">&quot;-cdcal&quot;</span>, <span class="stringliteral">&quot;Flag to make the CD calibration plots&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#af8e3847388e79ddb193de785d2953fd4">flag_cdcal</a> );</div>
+<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>    interface-&gt;Add(<span class="stringliteral">&quot;-spy&quot;</span>, <span class="stringliteral">&quot;Flag to run the DataSpy&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> );</div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>    interface-&gt;Add(<span class="stringliteral">&quot;-spyhists&quot;</span>, <span class="stringliteral">&quot;File containing histograms for monitoring in the spy&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a9c47c2546e083731399d4357c4962c71">spy_hists_file</a> );</div>
+<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>    interface-&gt;Add(<span class="stringliteral">&quot;-m&quot;</span>, <span class="stringliteral">&quot;Monitor input file every X seconds&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a> );</div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>    interface-&gt;Add(<span class="stringliteral">&quot;-p&quot;</span>, <span class="stringliteral">&quot;Port number for web server (default 8030)&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a61b9e2a604e69f931450c0996867e5b8">port_num</a> );</div>
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>    interface-&gt;Add(<span class="stringliteral">&quot;-d&quot;</span>, <span class="stringliteral">&quot;Directory to put the sorted data default is /path/to/data/sorted&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> );</div>
+<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>    interface-&gt;Add(<span class="stringliteral">&quot;-g&quot;</span>, <span class="stringliteral">&quot;Launch the GUI&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a3570c7473853b430e9fab3b030ac450b">gui_flag</a> );</div>
+<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>    interface-&gt;Add(<span class="stringliteral">&quot;-h&quot;</span>, <span class="stringliteral">&quot;Print this help&quot;</span>, &amp;<a class="code hl_variable" href="mb__sort_8cc.html#a47a15d53605fd7375635b3265f6d0ff2">help_flag</a> );</div>
+<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span> </div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>    interface-&gt;CheckFlags( argc, argv );</div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a47a15d53605fd7375635b3265f6d0ff2">help_flag</a> ) {</div>
 <div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>        </div>
-<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>        TApplication theApp( <span class="stringliteral">&quot;App&quot;</span>, &amp;argc, argv );</div>
-<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>        <span class="keyword">new</span> <a class="code hl_class" href="classMiniballGUI.html">MiniballGUI</a>();</div>
-<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>        theApp.Run();</div>
-<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>        </div>
-<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span> </div>
-<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>    }</div>
-<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span> </div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>    <span class="comment">// Check if we are doing the angle fit</span></div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a565a79df3255da68969d1ebe0769cfcd">flag_angle_fit</a> ) {</div>
-<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>        </div>
-<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>        <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() == 0 &amp;&amp; <a class="code hl_variable" href="mb__sort_8cc.html#aa1c29a75f97d71eea90245a0d3879fd1">name_angle_file</a>.length() &gt; 0 )</div>
-<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Angle fitting using energies from a file&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>            </div>
-<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() &gt; 0 &amp;&amp; <a class="code hl_variable" href="mb__sort_8cc.html#aa1c29a75f97d71eea90245a0d3879fd1">name_angle_file</a>.length() == 0 )</div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Angle fitting using 22Ne data files, with automatic peak fitting&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span> </div>
-<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>            </div>
-<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;When fitting the 22Ne angle data, you must give segments energy file as input&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;using the -angledata flag. Alternatively, you can give the raw data files using&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;the -i flag and the peaks will be automatically fitted from the events file.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>            <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>            </div>
-<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>        }</div>
-<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>        </div>
-<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>    }</div>
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>    </div>
-<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>    <span class="comment">// Check we have data files</span></div>
-<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( !<a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> ) {</div>
-<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>            </div>
-<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;You have to provide at least one input file unless you are in DataSpy mode!&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>            </div>
+<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>        interface-&gt;CheckFlags( 1, argv );</div>
+<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>        </div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>    }</div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>    </div>
+<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>    <span class="comment">// If we are launching the GUI</span></div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a3570c7473853b430e9fab3b030ac450b">gui_flag</a> || argc == 1 ) {</div>
+<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>        </div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>        TApplication theApp( <span class="stringliteral">&quot;App&quot;</span>, &amp;argc, argv );</div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>        <span class="keyword">new</span> <a class="code hl_class" href="classMiniballGUI.html">MiniballGUI</a>();</div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>        theApp.Run();</div>
+<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>        </div>
+<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span> </div>
+<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>    }</div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span> </div>
+<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>    <span class="comment">// Check if we are doing the angle fit</span></div>
+<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a565a79df3255da68969d1ebe0769cfcd">flag_angle_fit</a> ) {</div>
+<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>        </div>
+<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>        <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() == 0 &amp;&amp; <a class="code hl_variable" href="mb__sort_8cc.html#aa1c29a75f97d71eea90245a0d3879fd1">name_angle_file</a>.length() &gt; 0 )</div>
+<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Angle fitting using energies from a file&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>            </div>
+<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() &gt; 0 &amp;&amp; <a class="code hl_variable" href="mb__sort_8cc.html#aa1c29a75f97d71eea90245a0d3879fd1">name_angle_file</a>.length() == 0 )</div>
+<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Angle fitting using 22Ne data files, with automatic peak fitting&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span> </div>
+<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>            </div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;When fitting the 22Ne angle data, you must give segments energy file as input&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;using the -angledata flag. Alternatively, you can give the raw data files using&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;the -i flag and the peaks will be automatically fitted from the events file.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>            </div>
+<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>        }</div>
+<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>        </div>
 <div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>    }</div>
 <div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>    </div>
-<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>    <span class="comment">// Check if it should be MIDAS, MBS or MED format</span></div>
-<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>    <span class="keywordflow">if</span>( !<a class="code hl_variable" href="mb__sort_8cc.html#a419cbacf69871b965bcdd6e559b97d5f">flag_midas</a> &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#a653a6d35034a5c68ea5c79a88cd35837">flag_mbs</a> &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#aa1c29a75f97d71eea90245a0d3879fd1">name_angle_file</a>.length() ){</div>
-<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span> </div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>        std::string extension = <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).substr( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).find_last_of(<span class="stringliteral">&quot;.&quot;</span>)+1,</div>
-<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>                                                         <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).length()-<a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).find_last_of(<span class="stringliteral">&quot;.&quot;</span>)-1 );</div>
-<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>        </div>
-<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>        <span class="keywordflow">if</span>( extension == <span class="stringliteral">&quot;lmd&quot;</span> ) {</div>
-<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>            </div>
-<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>            <a class="code hl_variable" href="mb__sort_8cc.html#a653a6d35034a5c68ea5c79a88cd35837">flag_mbs</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Assuming we have MBS data because of the .lmd extension&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Forcing the data block size to 32 kB&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>            </div>
-<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>        }</div>
+<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>    <span class="comment">// Check we have data files</span></div>
+<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( !<a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> ) {</div>
+<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>            </div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;You have to provide at least one input file unless you are in DataSpy mode!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>            </div>
+<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>    }</div>
+<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>    </div>
+<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>    <span class="comment">// Check if it should be MIDAS, MBS or MED format</span></div>
+<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>    <span class="keywordflow">if</span>( !<a class="code hl_variable" href="mb__sort_8cc.html#a419cbacf69871b965bcdd6e559b97d5f">flag_midas</a> &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#a653a6d35034a5c68ea5c79a88cd35837">flag_mbs</a> &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#aa1c29a75f97d71eea90245a0d3879fd1">name_angle_file</a>.length() ){</div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span> </div>
+<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>        std::string extension = <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).substr( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).find_last_of(<span class="stringliteral">&quot;.&quot;</span>)+1,</div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>                                                         <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).length()-<a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).find_last_of(<span class="stringliteral">&quot;.&quot;</span>)-1 );</div>
 <div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>        </div>
-<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>( extension == <span class="stringliteral">&quot;med&quot;</span> ) {</div>
+<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>        <span class="keywordflow">if</span>( extension == <span class="stringliteral">&quot;lmd&quot;</span> ) {</div>
 <div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>            </div>
-<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>            <a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Assuming we have MED data because of the .med extension&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>            <a class="code hl_variable" href="mb__sort_8cc.html#a653a6d35034a5c68ea5c79a88cd35837">flag_mbs</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Assuming we have MBS data because of the .lmd extension&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Forcing the data block size to 32 kB&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>            </div>
 <div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>        }</div>
 <div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>        </div>
-<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>        <span class="keywordflow">else</span> <a class="code hl_variable" href="mb__sort_8cc.html#a419cbacf69871b965bcdd6e559b97d5f">flag_midas</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>        </div>
-<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>    }</div>
-<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>    </div>
-<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>    <span class="comment">// Check if we should be monitoring the input</span></div>
-<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> ) {</div>
-<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span> </div>
-<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>        <span class="comment">// Register signal and signal handler for DataSpy only</span></div>
-<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>        <span class="comment">//std::signal( SIGINT, signal_callback_handler );</span></div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span> </div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>        <a class="code hl_variable" href="mb__sort_8cc.html#ab52794e1af93cf9b7af34444c197cc28">flag_monitor</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>        <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a> &lt; 0 ) <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a> = 30;</div>
-<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Getting data from shared memory every &quot;</span> &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a>;</div>
-<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>        std::cout &lt;&lt; <span class="stringliteral">&quot; seconds using DataSpy&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>        </div>
-<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>    }</div>
-<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>    </div>
-<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a> &gt;= 0 &amp;&amp; <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() == 1 &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#a565a79df3255da68969d1ebe0769cfcd">flag_angle_fit</a> ) {</div>
-<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>        </div>
-<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>        <a class="code hl_variable" href="mb__sort_8cc.html#ab52794e1af93cf9b7af34444c197cc28">flag_monitor</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Running sort in a loop every &quot;</span> &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a>;</div>
-<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>        std::cout &lt;&lt; <span class="stringliteral">&quot; seconds\nMonitoring &quot;</span> &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0) &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>( extension == <span class="stringliteral">&quot;med&quot;</span> ) {</div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>            </div>
+<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>            <a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Assuming we have MED data because of the .med extension&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Forcing the data block size to 32 kB&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>            </div>
+<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>        }</div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>        </div>
+<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>        <span class="keywordflow">else</span> <a class="code hl_variable" href="mb__sort_8cc.html#a419cbacf69871b965bcdd6e559b97d5f">flag_midas</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>        </div>
+<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>    }</div>
+<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>    </div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>    <span class="comment">// Check if we should be monitoring the input</span></div>
+<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> ) {</div>
+<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span> </div>
+<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>        <span class="comment">// Register signal and signal handler for DataSpy only</span></div>
+<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>        <span class="comment">//std::signal( SIGINT, signal_callback_handler );</span></div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span> </div>
+<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>        <a class="code hl_variable" href="mb__sort_8cc.html#ab52794e1af93cf9b7af34444c197cc28">flag_monitor</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>        <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a> &lt; 0 ) <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a> = 30;</div>
+<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Getting data from shared memory every &quot;</span> &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a>;</div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>        std::cout &lt;&lt; <span class="stringliteral">&quot; seconds using DataSpy&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>        </div>
 <div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>    }</div>
 <div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>    </div>
-<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a> &gt;= 0 &amp;&amp; <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() != 1 ) {</div>
+<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a> &gt;= 0 &amp;&amp; <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() == 1 &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#a565a79df3255da68969d1ebe0769cfcd">flag_angle_fit</a> ) {</div>
 <div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>        </div>
-<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>        <a class="code hl_variable" href="mb__sort_8cc.html#ab52794e1af93cf9b7af34444c197cc28">flag_monitor</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Cannot monitor multiple input files, switching to normal mode&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>        </div>
-<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>    }</div>
-<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>    </div>
-<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>    <span class="comment">// Check data type for spy</span></div>
-<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#a419cbacf69871b965bcdd6e559b97d5f">flag_midas</a> &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#a653a6d35034a5c68ea5c79a88cd35837">flag_mbs</a> &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> ){</div>
+<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>        <a class="code hl_variable" href="mb__sort_8cc.html#ab52794e1af93cf9b7af34444c197cc28">flag_monitor</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Running sort in a loop every &quot;</span> &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a>;</div>
+<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>        std::cout &lt;&lt; <span class="stringliteral">&quot; seconds\nMonitoring &quot;</span> &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0) &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>        </div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>    }</div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>    </div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a78d5896ee413f173ff7e7fdcf9b912c7">mon_time</a> &gt;= 0 &amp;&amp; <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() != 1 ) {</div>
 <div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>        </div>
-<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Assuming MIDAS data for spy&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>        <a class="code hl_variable" href="mb__sort_8cc.html#a419cbacf69871b965bcdd6e559b97d5f">flag_midas</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>        <a class="code hl_variable" href="mb__sort_8cc.html#ab52794e1af93cf9b7af34444c197cc28">flag_monitor</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Cannot monitor multiple input files, switching to normal mode&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>        </div>
 <div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>    }</div>
 <div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>    </div>
-<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>    <span class="comment">// Check the directory we are writing to</span></div>
-<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a>.length() == 0 ) {</div>
+<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>    <span class="comment">// Check data type for spy</span></div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#a419cbacf69871b965bcdd6e559b97d5f">flag_midas</a> &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#a653a6d35034a5c68ea5c79a88cd35837">flag_mbs</a> &amp;&amp; !<a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> ){</div>
 <div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>        </div>
-<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>        <span class="keywordflow">if</span>( <span class="keywordtype">bool</span>( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() ) ) {</div>
-<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>            </div>
-<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>            <span class="comment">// Probably in the current working directory</span></div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>            <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).find(<span class="stringliteral">&quot;/&quot;</span>) == std::string::npos )</div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>                <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> = <span class="stringliteral">&quot;./sorted&quot;</span>;</div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>            </div>
-<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>            <span class="comment">// Called from a different directory</span></div>
-<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>            <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>                </div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>                <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> = <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).substr( 0,</div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>                                                        <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).find_last_of(<span class="stringliteral">&quot;/&quot;</span>) );</div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>                <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> += <span class="stringliteral">&quot;/sorted&quot;</span>;</div>
-<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>                </div>
-<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>            }</div>
-<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>            </div>
-<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>        }</div>
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>        </div>
-<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> ) <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> = <span class="stringliteral">&quot;./dataspy&quot;</span>;</div>
-<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a565a79df3255da68969d1ebe0769cfcd">flag_angle_fit</a> ) <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> = <span class="stringliteral">&quot;./positions&quot;</span>;</div>
-<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>        <span class="keywordflow">else</span> <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> = <span class="stringliteral">&quot;./mb_sort_outputs&quot;</span>;</div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span> </div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>    }</div>
-<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>    </div>
-<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>    <span class="comment">// Create the directory if it doesn&#39;t exist (not Windows compliant)</span></div>
-<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>    std::string cmd = <span class="stringliteral">&quot;mkdir -p &quot;</span> + <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a>;</div>
-<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>    gSystem-&gt;Exec( cmd.data() );    </div>
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Sorted data files being saved to &quot;</span> &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span> </div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>    <span class="comment">// Check the ouput file name</span></div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a>.length() == 0 ) {</div>
-<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span> </div>
-<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>        <span class="keywordflow">if</span>( <span class="keywordtype">bool</span>( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() ) ) {</div>
-<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span> </div>
-<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>            std::string name_input_file = <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).substr( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).find_last_of(<span class="stringliteral">&quot;/&quot;</span>)+1,</div>
-<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>                                                       <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).length() - <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).find_last_of(<span class="stringliteral">&quot;/&quot;</span>)-1 );</div>
-<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>            name_input_file = name_input_file.substr( 0,</div>
-<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>                                                     name_input_file.find_last_of(<span class="stringliteral">&quot;.&quot;</span>) );</div>
-<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>            </div>
-<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>            <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a565a79df3255da68969d1ebe0769cfcd">flag_angle_fit</a> ) {</div>
-<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>                </div>
-<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>                <a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a> = <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> + <span class="stringliteral">&quot;/&quot;</span> + name_input_file + <span class="stringliteral">&quot;_results.root&quot;</span>;</div>
-<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span> </div>
-<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>            }</div>
-<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>            </div>
-<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() &gt; 1 ) {</div>
-<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span> </div>
-<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>                <a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a> = <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> + <span class="stringliteral">&quot;/&quot;</span> + name_input_file + <span class="stringliteral">&quot;_hists_&quot;</span>;</div>
-<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>                <a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a> += std::to_string(<a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size()) + <span class="stringliteral">&quot;_subruns.root&quot;</span>;</div>
-<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span> </div>
-<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>            }</div>
-<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span> </div>
-<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>                <a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a> = <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> + <span class="stringliteral">&quot;/&quot;</span> + name_input_file + <span class="stringliteral">&quot;_hists.root&quot;</span>;</div>
-<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>                </div>
-<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>        }</div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>        </div>
-<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>        <span class="keywordflow">else</span> <a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a> = <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> + <span class="stringliteral">&quot;/monitor_hists.root&quot;</span>;</div>
-<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span> </div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>    }</div>
-<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span> </div>
-<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>    <span class="comment">// Check we have a Settings file</span></div>
-<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a>.length() &gt; 0 ) {</div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>        </div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>        <span class="comment">// Test if the file exists</span></div>
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>        std::ifstream ftest;</div>
-<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>        ftest.open( <a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a>.data() );</div>
-<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>        <span class="keywordflow">if</span>( !ftest.is_open() ) {</div>
-<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>            </div>
-<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>            std::cout &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a> &lt;&lt; <span class="stringliteral">&quot; does not exist.&quot;</span>;</div>
-<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>            std::cout &lt;&lt; <span class="stringliteral">&quot; Using defaults&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>            <a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a> = <span class="stringliteral">&quot;dummy&quot;</span>;</div>
-<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span> </div>
-<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>        }</div>
-<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>        </div>
-<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>        </div>
-<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span>            ftest.close();</div>
-<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Settings file: &quot;</span> &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>        </div>
-<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>        }</div>
-<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span> </div>
-<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>    }</div>
-<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Assuming MIDAS data for spy&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>        <a class="code hl_variable" href="mb__sort_8cc.html#a419cbacf69871b965bcdd6e559b97d5f">flag_midas</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>        </div>
+<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>    }</div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>    </div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>    <span class="comment">// Check the directory we are writing to</span></div>
+<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a>.length() == 0 ) {</div>
+<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>        </div>
+<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>        <span class="keywordflow">if</span>( <span class="keywordtype">bool</span>( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() ) ) {</div>
+<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>            </div>
+<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>            <span class="comment">// Probably in the current working directory</span></div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>            <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).find(<span class="stringliteral">&quot;/&quot;</span>) == std::string::npos )</div>
+<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>                <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> = <span class="stringliteral">&quot;./sorted&quot;</span>;</div>
+<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>            </div>
+<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>            <span class="comment">// Called from a different directory</span></div>
+<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>            <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>                </div>
+<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>                <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> = <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).substr( 0,</div>
+<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>                                                        <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).find_last_of(<span class="stringliteral">&quot;/&quot;</span>) );</div>
+<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>                <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> += <span class="stringliteral">&quot;/sorted&quot;</span>;</div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>                </div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>            }</div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>            </div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>        }</div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>        </div>
+<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> ) <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> = <span class="stringliteral">&quot;./dataspy&quot;</span>;</div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a565a79df3255da68969d1ebe0769cfcd">flag_angle_fit</a> ) <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> = <span class="stringliteral">&quot;./positions&quot;</span>;</div>
+<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>        <span class="keywordflow">else</span> <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> = <span class="stringliteral">&quot;./mb_sort_outputs&quot;</span>;</div>
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span> </div>
+<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>    }</div>
+<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>    </div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>    <span class="comment">// Create the directory if it doesn&#39;t exist (not Windows compliant)</span></div>
+<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>    std::string cmd = <span class="stringliteral">&quot;mkdir -p &quot;</span> + <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a>;</div>
+<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>    gSystem-&gt;Exec( cmd.data() );    </div>
+<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Sorted data files being saved to &quot;</span> &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span> </div>
+<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>    <span class="comment">// Check the ouput file name</span></div>
+<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a>.length() == 0 ) {</div>
+<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span> </div>
+<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>        <span class="keywordflow">if</span>( <span class="keywordtype">bool</span>( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() ) ) {</div>
+<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span> </div>
+<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>            std::string name_input_file = <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).substr( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).find_last_of(<span class="stringliteral">&quot;/&quot;</span>)+1,</div>
+<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>                                                       <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).length() - <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.at(0).find_last_of(<span class="stringliteral">&quot;/&quot;</span>)-1 );</div>
+<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>            name_input_file = name_input_file.substr( 0,</div>
+<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>                                                     name_input_file.find_last_of(<span class="stringliteral">&quot;.&quot;</span>) );</div>
+<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>            </div>
+<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>            <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a565a79df3255da68969d1ebe0769cfcd">flag_angle_fit</a> ) {</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>                </div>
+<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>                <a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a> = <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> + <span class="stringliteral">&quot;/&quot;</span> + name_input_file + <span class="stringliteral">&quot;_results.root&quot;</span>;</div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span> </div>
+<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>            }</div>
+<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>            </div>
+<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size() &gt; 1 ) {</div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span> </div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>                <a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a> = <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> + <span class="stringliteral">&quot;/&quot;</span> + name_input_file + <span class="stringliteral">&quot;_hists_&quot;</span>;</div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>                <a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a> += std::to_string(<a class="code hl_variable" href="mb__sort_8cc.html#aa4dadb650d7b8d8398e397198e0d7647">input_names</a>.size()) + <span class="stringliteral">&quot;_subruns.root&quot;</span>;</div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span> </div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>            }</div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span> </div>
+<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>                <a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a> = <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> + <span class="stringliteral">&quot;/&quot;</span> + name_input_file + <span class="stringliteral">&quot;_hists.root&quot;</span>;</div>
+<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>                </div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>        }</div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>        </div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>        <span class="keywordflow">else</span> <a class="code hl_variable" href="mb__sort_8cc.html#a4bfaa4b497cb5e62d0cfc56f5ce8cfc9">output_name</a> = <a class="code hl_variable" href="mb__sort_8cc.html#a3483ccd74f9895052e7a70038921dce6">datadir_name</a> + <span class="stringliteral">&quot;/monitor_hists.root&quot;</span>;</div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span> </div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>    }</div>
+<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span> </div>
+<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>    <span class="comment">// Check we have a Settings file</span></div>
+<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a>.length() &gt; 0 ) {</div>
+<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>        </div>
+<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>        <span class="comment">// Test if the file exists</span></div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>        std::ifstream ftest;</div>
+<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>        ftest.open( <a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a>.data() );</div>
+<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>        <span class="keywordflow">if</span>( !ftest.is_open() ) {</div>
+<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>            </div>
+<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span>            std::cout &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a> &lt;&lt; <span class="stringliteral">&quot; does not exist.&quot;</span>;</div>
+<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span>            std::cout &lt;&lt; <span class="stringliteral">&quot; Using defaults&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>            <a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a> = <span class="stringliteral">&quot;dummy&quot;</span>;</div>
+<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span> </div>
+<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span>        }</div>
+<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>        </div>
+<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>        <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>        </div>
-<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;No settings file provided. Using defaults.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>        <a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a> = <span class="stringliteral">&quot;dummy&quot;</span>;</div>
-<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span> </div>
-<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>    }</div>
-<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>    </div>
-<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>    <span class="comment">// Check we have a calibration file</span></div>
-<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a>.length() &gt; 0 ) {</div>
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>            ftest.close();</div>
+<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Settings file: &quot;</span> &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>        </div>
+<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>        }</div>
+<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span> </div>
+<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>    }</div>
+<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>    <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>        </div>
-<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>        <span class="comment">// Test if the file exists</span></div>
-<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span>        std::ifstream ftest;</div>
-<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>        ftest.open( <a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a>.data() );</div>
-<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>        <span class="keywordflow">if</span>( !ftest.is_open() ) {</div>
-<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>            </div>
-<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>            std::cout &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a> &lt;&lt; <span class="stringliteral">&quot; does not exist.&quot;</span>;</div>
-<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>            std::cout &lt;&lt; <span class="stringliteral">&quot; Using defaults&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>            <a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a> = <span class="stringliteral">&quot;dummy&quot;</span>;</div>
-<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span> </div>
-<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>        }</div>
-<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>        </div>
-<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;No settings file provided. Using defaults.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span>        <a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a> = <span class="stringliteral">&quot;dummy&quot;</span>;</div>
+<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span> </div>
+<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>    }</div>
+<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>    </div>
+<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>    <span class="comment">// Check we have a calibration file</span></div>
+<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a>.length() &gt; 0 ) {</div>
+<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>        </div>
+<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span>        <span class="comment">// Test if the file exists</span></div>
+<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>        std::ifstream ftest;</div>
+<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>        ftest.open( <a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a>.data() );</div>
+<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>        <span class="keywordflow">if</span>( !ftest.is_open() ) {</div>
 <div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>            </div>
-<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>            ftest.close();</div>
-<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Calibration file: &quot;</span> &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>            <a class="code hl_variable" href="mb__sort_8cc.html#af9f81236e86fb558e6611a3921cb01c3">overwrite_cal</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>            </div>
+<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>            std::cout &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a> &lt;&lt; <span class="stringliteral">&quot; does not exist.&quot;</span>;</div>
+<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span>            std::cout &lt;&lt; <span class="stringliteral">&quot; Using defaults&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>            <a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a> = <span class="stringliteral">&quot;dummy&quot;</span>;</div>
+<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span> </div>
 <div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>        }</div>
-<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span> </div>
-<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>    }</div>
-<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>        </div>
-<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;No calibration file provided. Using defaults.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>        <a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a> = <span class="stringliteral">&quot;dummy&quot;</span>;</div>
-<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span> </div>
-<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>    }</div>
-<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>    </div>
-<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>    <span class="comment">// Check we have a reaction file</span></div>
-<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a>.length() &gt; 0 ) {</div>
+<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span>        </div>
+<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>            </div>
+<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>            ftest.close();</div>
+<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Calibration file: &quot;</span> &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>            <a class="code hl_variable" href="mb__sort_8cc.html#af9f81236e86fb558e6611a3921cb01c3">overwrite_cal</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>            </div>
+<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>        }</div>
+<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span> </div>
+<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>    }</div>
+<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>    <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>        </div>
-<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>        <span class="comment">// Test if the file exists</span></div>
-<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>        std::ifstream ftest;</div>
-<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>        ftest.open( <a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a>.data() );</div>
-<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>        <span class="keywordflow">if</span>( !ftest.is_open() ) {</div>
-<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>            </div>
-<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>            std::cout &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a> &lt;&lt; <span class="stringliteral">&quot; does not exist.&quot;</span>;</div>
-<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span>            std::cout &lt;&lt; <span class="stringliteral">&quot; Using defaults&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span>            <a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a> = <span class="stringliteral">&quot;dummy&quot;</span>;</div>
-<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span> </div>
-<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>        }</div>
-<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>        </div>
-<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>        </div>
-<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>            ftest.close();</div>
-<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Reaction file: &quot;</span> &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span> </div>
-<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>        }</div>
-<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span> </div>
-<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>    }</div>
-<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;No calibration file provided. Using defaults.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>        <a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a> = <span class="stringliteral">&quot;dummy&quot;</span>;</div>
+<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span> </div>
+<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>    }</div>
+<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>    </div>
+<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>    <span class="comment">// Check we have a reaction file</span></div>
+<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a>.length() &gt; 0 ) {</div>
+<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span>        </div>
+<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span>        <span class="comment">// Test if the file exists</span></div>
+<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>        std::ifstream ftest;</div>
+<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>        ftest.open( <a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a>.data() );</div>
+<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>        <span class="keywordflow">if</span>( !ftest.is_open() ) {</div>
+<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>            </div>
+<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>            std::cout &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a> &lt;&lt; <span class="stringliteral">&quot; does not exist.&quot;</span>;</div>
+<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span>            std::cout &lt;&lt; <span class="stringliteral">&quot; Using defaults&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>            <a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a> = <span class="stringliteral">&quot;dummy&quot;</span>;</div>
+<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span> </div>
+<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>        }</div>
+<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>        </div>
+<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span>        <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>        </div>
-<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;No reaction file provided. Using defaults.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>        <a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a> = <span class="stringliteral">&quot;dummy&quot;</span>;</div>
+<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>            ftest.close();</div>
+<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Reaction file: &quot;</span> &lt;&lt; <a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span> </div>
-<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>    }</div>
-<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span>    </div>
-<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>    <a class="code hl_variable" href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a> = std::make_shared&lt;MiniballSettings&gt;( <a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a> );</div>
-<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>    <a class="code hl_variable" href="mb__sort_8cc.html#ab5fd96c56d1642cfe7d428e1aa0ac9d8">mycal</a> = std::make_shared&lt;MiniballCalibration&gt;( <a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a>, <a class="code hl_variable" href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a> );</div>
-<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a653a6d35034a5c68ea5c79a88cd35837">flag_mbs</a> || <a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> ) <a class="code hl_variable" href="mb__sort_8cc.html#ab5fd96c56d1642cfe7d428e1aa0ac9d8">mycal</a>-&gt;SetDefaultQint();</div>
-<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span>    <a class="code hl_variable" href="mb__sort_8cc.html#ab5fd96c56d1642cfe7d428e1aa0ac9d8">mycal</a>-&gt;ReadCalibration();</div>
-<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>    <a class="code hl_variable" href="mb__sort_8cc.html#a29b971a39290a028f112805b09c370a7">myreact</a> = std::make_shared&lt;MiniballReaction&gt;( <a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a>, <a class="code hl_variable" href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a> );</div>
-<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>    </div>
-<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>    <span class="comment">// Force data block size for MBS and MED data</span></div>
-<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a653a6d35034a5c68ea5c79a88cd35837">flag_mbs</a> ) <a class="code hl_variable" href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a>-&gt;SetBlockSize( 0x8000 );</div>
-<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> ) <a class="code hl_variable" href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a>-&gt;SetBlockSize( 0x4000 );</div>
-<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span>    </div>
-<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span>    <span class="comment">// Turn of MBS event sorting for MIDAS and MED files</span></div>
-<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a419cbacf69871b965bcdd6e559b97d5f">flag_midas</a> || <a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> ) <a class="code hl_variable" href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a>-&gt;SetMbsEventMode(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span> </div>
-<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span> </div>
-<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>    <span class="comment">//-------------------//</span></div>
-<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>    <span class="comment">// Online monitoring //</span></div>
-<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>    <span class="comment">//-------------------//</span></div>
-<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#ab52794e1af93cf9b7af34444c197cc28">flag_monitor</a> || <a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> ) {</div>
-<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>        </div>
-<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>        <span class="comment">// Don&#39;t support MBS data spy</span></div>
-<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>        <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a653a6d35034a5c68ea5c79a88cd35837">flag_mbs</a> &amp;&amp; <a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> ){</div>
-<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>            </div>
-<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;MBS data spy not yet supported&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>            </div>
-<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>        }</div>
+<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>        }</div>
+<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span> </div>
+<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>    }</div>
+<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span>        </div>
+<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;No reaction file provided. Using defaults.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>        <a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a> = <span class="stringliteral">&quot;dummy&quot;</span>;</div>
+<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span> </div>
+<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>    }</div>
+<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>    </div>
+<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>    <a class="code hl_variable" href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a> = std::make_shared&lt;MiniballSettings&gt;( <a class="code hl_variable" href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a> );</div>
+<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span>    <a class="code hl_variable" href="mb__sort_8cc.html#ab5fd96c56d1642cfe7d428e1aa0ac9d8">mycal</a> = std::make_shared&lt;MiniballCalibration&gt;( <a class="code hl_variable" href="mb__sort_8cc.html#a7b1c1da93caeee9b88946f8ef147d915">name_cal_file</a>, <a class="code hl_variable" href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a> );</div>
+<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a653a6d35034a5c68ea5c79a88cd35837">flag_mbs</a> || <a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> ) <a class="code hl_variable" href="mb__sort_8cc.html#ab5fd96c56d1642cfe7d428e1aa0ac9d8">mycal</a>-&gt;SetDefaultQint();</div>
+<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>    <a class="code hl_variable" href="mb__sort_8cc.html#ab5fd96c56d1642cfe7d428e1aa0ac9d8">mycal</a>-&gt;ReadCalibration();</div>
+<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>    <a class="code hl_variable" href="mb__sort_8cc.html#a29b971a39290a028f112805b09c370a7">myreact</a> = std::make_shared&lt;MiniballReaction&gt;( <a class="code hl_variable" href="mb__sort_8cc.html#a8168d4a599aa55b6698b1f37c99138cd">name_react_file</a>, <a class="code hl_variable" href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a> );</div>
+<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>    </div>
+<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>    <span class="comment">// Force data block size for MBS and MED data</span></div>
+<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a653a6d35034a5c68ea5c79a88cd35837">flag_mbs</a> ) <a class="code hl_variable" href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a>-&gt;SetBlockSize( 0x8000 );</div>
+<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> ) <a class="code hl_variable" href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a>-&gt;SetBlockSize( 0x4000 );</div>
+<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>    </div>
+<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>    <span class="comment">// Turn of MBS event sorting for MIDAS and MED files</span></div>
+<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a419cbacf69871b965bcdd6e559b97d5f">flag_midas</a> || <a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> ) <a class="code hl_variable" href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a>-&gt;SetMbsEventMode(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span> </div>
+<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span> </div>
+<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>    <span class="comment">//-------------------//</span></div>
+<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>    <span class="comment">// Online monitoring //</span></div>
+<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>    <span class="comment">//-------------------//</span></div>
+<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#ab52794e1af93cf9b7af34444c197cc28">flag_monitor</a> || <a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> ) {</div>
 <div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span>        </div>
-<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>        <span class="comment">// Don&#39;t support MED data spy (historical data)</span></div>
-<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>        <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> &amp;&amp; <a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> ){</div>
+<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>        <span class="comment">// Don&#39;t support MBS data spy</span></div>
+<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>        <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a653a6d35034a5c68ea5c79a88cd35837">flag_mbs</a> &amp;&amp; <a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> ){</div>
 <div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>            </div>
-<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;MED data spy not supported because data is historical&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;MBS data spy not yet supported&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>            </div>
 <div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span>        }</div>
-<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span> </div>
-<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>        <span class="comment">// Read the histogram list from the file</span></div>
-<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span>        <a class="code hl_function" href="mb__sort_8cc.html#a2dad245d2866a907e8fd06483150e1ba">ReadSpyHistogramList</a>();</div>
-<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span> </div>
-<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span>        <span class="comment">// Make some data for the thread</span></div>
-<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>        <a class="code hl_struct" href="structthptr.html">thread_data</a> data;</div>
-<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>        data.<a class="code hl_variable" href="structthptr.html#ac0bd7be3de289ab47dc4f800b307239d">mycal</a> = <a class="code hl_variable" href="mb__sort_8cc.html#ab5fd96c56d1642cfe7d428e1aa0ac9d8">mycal</a>;</div>
-<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>        data.<a class="code hl_variable" href="structthptr.html#ad789abe9fe5830bcfae732715763ad27">myset</a> = <a class="code hl_variable" href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a>;</div>
-<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>        data.<a class="code hl_variable" href="structthptr.html#a34ceb9a18b272794087ba2aa58f1640c">myreact</a> = <a class="code hl_variable" href="mb__sort_8cc.html#a29b971a39290a028f112805b09c370a7">myreact</a>;</div>
-<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>        data.<a class="code hl_variable" href="structthptr.html#aee388b2cfebeafb702c523e88ba84494">flag_alive</a> = <a class="code hl_variable" href="mb__sort_8cc.html#a5328d2378558c01ec007e61a8e0d100c">flag_alive</a>;</div>
-<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>        data.<a class="code hl_variable" href="structthptr.html#a114b130327b04d6142951ac8296cb893">physhists</a> = <a class="code hl_variable" href="mb__sort_8cc.html#adc2d264126e78aacd068b13c2a2b98bd">physhists</a>;</div>
-<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>        data.<a class="code hl_variable" href="structthptr.html#ac54bb80056a55aae473e804735955b06">spylayout</a>[0] = <a class="code hl_variable" href="mb__sort_8cc.html#a69ec3c9a2c39344b29253749a8d9619a">spylayout</a>[0];</div>
-<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>        data.<a class="code hl_variable" href="structthptr.html#ac54bb80056a55aae473e804735955b06">spylayout</a>[1] = <a class="code hl_variable" href="mb__sort_8cc.html#a69ec3c9a2c39344b29253749a8d9619a">spylayout</a>[1];</div>
-<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span> </div>
-<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>        <span class="comment">// Start the HTTP server from the main thread (should usually do this)</span></div>
-<div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>        <a class="code hl_function" href="mb__sort_8cc.html#a7b61cf34aa410175d2e55fe2471f3fe7">start_http</a>();</div>
-<div class="line"><a id="l01263" name="l01263"></a><span class="lineno"> 1263</span>        gSystem-&gt;ProcessEvents();</div>
-<div class="line"><a id="l01264" name="l01264"></a><span class="lineno"> 1264</span> </div>
-<div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span>        <span class="comment">// Thread for the monitor process</span></div>
-<div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span>        TThread *th0 = <span class="keyword">new</span> TThread( <span class="stringliteral">&quot;monitor&quot;</span>, <a class="code hl_function" href="mb__sort_8cc.html#a41bfdfd4b3dc4ec83a7ad948b00d3993">monitor_run</a>, (<span class="keywordtype">void</span>*)&amp;data );</div>
-<div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>        th0-&gt;Run();</div>
+<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span>        </div>
+<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>        <span class="comment">// Don&#39;t support MED data spy (historical data)</span></div>
+<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span>        <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a2b544d22e2414ac7930eb6e0f7341e2f">flag_med</a> &amp;&amp; <a class="code hl_variable" href="mb__sort_8cc.html#acfc4310b631d6d8bcfc7086cc6bef35d">flag_spy</a> ){</div>
+<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span>            </div>
+<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;MED data spy not supported because data is historical&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>            </div>
+<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>        }</div>
+<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span> </div>
+<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>        <span class="comment">// Read the histogram list from the file</span></div>
+<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>        <a class="code hl_function" href="mb__sort_8cc.html#a2dad245d2866a907e8fd06483150e1ba">ReadSpyHistogramList</a>();</div>
+<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span> </div>
+<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>        <span class="comment">// Make some data for the thread</span></div>
+<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>        <a class="code hl_struct" href="structthptr.html">thread_data</a> data;</div>
+<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>        data.<a class="code hl_variable" href="structthptr.html#ac0bd7be3de289ab47dc4f800b307239d">mycal</a> = <a class="code hl_variable" href="mb__sort_8cc.html#ab5fd96c56d1642cfe7d428e1aa0ac9d8">mycal</a>;</div>
+<div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>        data.<a class="code hl_variable" href="structthptr.html#ad789abe9fe5830bcfae732715763ad27">myset</a> = <a class="code hl_variable" href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a>;</div>
+<div class="line"><a id="l01263" name="l01263"></a><span class="lineno"> 1263</span>        data.<a class="code hl_variable" href="structthptr.html#a34ceb9a18b272794087ba2aa58f1640c">myreact</a> = <a class="code hl_variable" href="mb__sort_8cc.html#a29b971a39290a028f112805b09c370a7">myreact</a>;</div>
+<div class="line"><a id="l01264" name="l01264"></a><span class="lineno"> 1264</span>        data.<a class="code hl_variable" href="structthptr.html#aee388b2cfebeafb702c523e88ba84494">flag_alive</a> = <a class="code hl_variable" href="mb__sort_8cc.html#a5328d2378558c01ec007e61a8e0d100c">flag_alive</a>;</div>
+<div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span>        data.<a class="code hl_variable" href="structthptr.html#a114b130327b04d6142951ac8296cb893">physhists</a> = <a class="code hl_variable" href="mb__sort_8cc.html#adc2d264126e78aacd068b13c2a2b98bd">physhists</a>;</div>
+<div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span>        data.<a class="code hl_variable" href="structthptr.html#ac54bb80056a55aae473e804735955b06">spylayout</a>[0] = <a class="code hl_variable" href="mb__sort_8cc.html#a69ec3c9a2c39344b29253749a8d9619a">spylayout</a>[0];</div>
+<div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>        data.<a class="code hl_variable" href="structthptr.html#ac54bb80056a55aae473e804735955b06">spylayout</a>[1] = <a class="code hl_variable" href="mb__sort_8cc.html#a69ec3c9a2c39344b29253749a8d9619a">spylayout</a>[1];</div>
 <div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span> </div>
-<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>        <span class="comment">// wait until we finish</span></div>
-<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>        <span class="keywordflow">while</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a5328d2378558c01ec007e61a8e0d100c">flag_alive</a> ){</div>
-<div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span> </div>
-<div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span>            gSystem-&gt;Sleep(10);</div>
-<div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>            gSystem-&gt;ProcessEvents();</div>
-<div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span> </div>
-<div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>        }</div>
-<div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span>        </div>
-<div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span>        </div>
-<div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span>    }</div>
-<div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span> </div>
-<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span> </div>
+<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>        <span class="comment">// Start the HTTP server from the main thread (should usually do this)</span></div>
+<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>        <a class="code hl_function" href="mb__sort_8cc.html#a7b61cf34aa410175d2e55fe2471f3fe7">start_http</a>();</div>
+<div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span>        gSystem-&gt;ProcessEvents();</div>
+<div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span> </div>
+<div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>        <span class="comment">// Thread for the monitor process</span></div>
+<div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span>        TThread *th0 = <span class="keyword">new</span> TThread( <span class="stringliteral">&quot;monitor&quot;</span>, <a class="code hl_function" href="mb__sort_8cc.html#a41bfdfd4b3dc4ec83a7ad948b00d3993">monitor_run</a>, (<span class="keywordtype">void</span>*)&amp;data );</div>
+<div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>        th0-&gt;Run();</div>
+<div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span> </div>
+<div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span>        <span class="comment">// wait until we finish</span></div>
+<div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span>        <span class="keywordflow">while</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a5328d2378558c01ec007e61a8e0d100c">flag_alive</a> ){</div>
+<div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span> </div>
+<div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span>            gSystem-&gt;Sleep(10);</div>
+<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span>            gSystem-&gt;ProcessEvents();</div>
 <div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span> </div>
-<div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span>    <span class="comment">//------------------//</span></div>
-<div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span>    <span class="comment">// Run the analysis //</span></div>
-<div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span>    <span class="comment">//------------------//</span></div>
-<div class="line"><a id="l01286" name="l01286"></a><span class="lineno"> 1286</span>    <a class="code hl_function" href="mb__sort_8cc.html#a6b67fa70c3afd18f323ab1d0551c71aa">do_convert</a>();</div>
-<div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a565a79df3255da68969d1ebe0769cfcd">flag_angle_fit</a> ){</div>
-<div class="line"><a id="l01288" name="l01288"></a><span class="lineno"> 1288</span>        <a class="code hl_function" href="mb__sort_8cc.html#ab5f9325905b9db1cc945f2f8cd5a6513">do_build</a>();</div>
-<div class="line"><a id="l01289" name="l01289"></a><span class="lineno"> 1289</span>        <a class="code hl_function" href="mb__sort_8cc.html#a4b4e2b4de6aeb5701dd7d06fb8c108d0">do_angle_fit</a>();</div>
-<div class="line"><a id="l01290" name="l01290"></a><span class="lineno"> 1290</span>    }</div>
-<div class="line"><a id="l01291" name="l01291"></a><span class="lineno"> 1291</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#af8e3847388e79ddb193de785d2953fd4">flag_cdcal</a> ) {</div>
-<div class="line"><a id="l01292" name="l01292"></a><span class="lineno"> 1292</span>        <a class="code hl_function" href="mb__sort_8cc.html#ab87a21bd702d13ada574c71f037a18d0">do_cdcal</a>();</div>
-<div class="line"><a id="l01293" name="l01293"></a><span class="lineno"> 1293</span>    }</div>
-<div class="line"><a id="l01294" name="l01294"></a><span class="lineno"> 1294</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( !<a class="code hl_variable" href="mb__sort_8cc.html#adb73828698a0a12204817ca52b87306d">flag_source</a> ) {</div>
-<div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span>        <span class="keywordflow">if</span>( <a class="code hl_function" href="mb__sort_8cc.html#ab5f9325905b9db1cc945f2f8cd5a6513">do_build</a>() )</div>
-<div class="line"><a id="l01296" name="l01296"></a><span class="lineno"> 1296</span>            <a class="code hl_function" href="mb__sort_8cc.html#aab6b0506267cf908785df7061640da3d">do_hist</a>();</div>
-<div class="line"><a id="l01297" name="l01297"></a><span class="lineno"> 1297</span>    }</div>
-<div class="line"><a id="l01298" name="l01298"></a><span class="lineno"> 1298</span> </div>
-<div class="line"><a id="l01299" name="l01299"></a><span class="lineno"> 1299</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nFinished!\n&quot;</span>;</div>
-<div class="line"><a id="l01300" name="l01300"></a><span class="lineno"> 1300</span>            </div>
-<div class="line"><a id="l01301" name="l01301"></a><span class="lineno"> 1301</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01302" name="l01302"></a><span class="lineno"> 1302</span>    </div>
-<div class="line"><a id="l01303" name="l01303"></a><span class="lineno"> 1303</span>}</div>
+<div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span>        }</div>
+<div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span>        </div>
+<div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01286" name="l01286"></a><span class="lineno"> 1286</span>        </div>
+<div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span>    }</div>
+<div class="line"><a id="l01288" name="l01288"></a><span class="lineno"> 1288</span> </div>
+<div class="line"><a id="l01289" name="l01289"></a><span class="lineno"> 1289</span> </div>
+<div class="line"><a id="l01290" name="l01290"></a><span class="lineno"> 1290</span> </div>
+<div class="line"><a id="l01291" name="l01291"></a><span class="lineno"> 1291</span>    <span class="comment">//------------------//</span></div>
+<div class="line"><a id="l01292" name="l01292"></a><span class="lineno"> 1292</span>    <span class="comment">// Run the analysis //</span></div>
+<div class="line"><a id="l01293" name="l01293"></a><span class="lineno"> 1293</span>    <span class="comment">//------------------//</span></div>
+<div class="line"><a id="l01294" name="l01294"></a><span class="lineno"> 1294</span>    <a class="code hl_function" href="mb__sort_8cc.html#a6b67fa70c3afd18f323ab1d0551c71aa">do_convert</a>();</div>
+<div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#a565a79df3255da68969d1ebe0769cfcd">flag_angle_fit</a> ){</div>
+<div class="line"><a id="l01296" name="l01296"></a><span class="lineno"> 1296</span>        <a class="code hl_function" href="mb__sort_8cc.html#ab5f9325905b9db1cc945f2f8cd5a6513">do_build</a>();</div>
+<div class="line"><a id="l01297" name="l01297"></a><span class="lineno"> 1297</span>        <a class="code hl_function" href="mb__sort_8cc.html#a4b4e2b4de6aeb5701dd7d06fb8c108d0">do_angle_fit</a>();</div>
+<div class="line"><a id="l01298" name="l01298"></a><span class="lineno"> 1298</span>    }</div>
+<div class="line"><a id="l01299" name="l01299"></a><span class="lineno"> 1299</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code hl_variable" href="mb__sort_8cc.html#af8e3847388e79ddb193de785d2953fd4">flag_cdcal</a> ) {</div>
+<div class="line"><a id="l01300" name="l01300"></a><span class="lineno"> 1300</span>        <a class="code hl_function" href="mb__sort_8cc.html#ab87a21bd702d13ada574c71f037a18d0">do_cdcal</a>();</div>
+<div class="line"><a id="l01301" name="l01301"></a><span class="lineno"> 1301</span>    }</div>
+<div class="line"><a id="l01302" name="l01302"></a><span class="lineno"> 1302</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( !<a class="code hl_variable" href="mb__sort_8cc.html#adb73828698a0a12204817ca52b87306d">flag_source</a> ) {</div>
+<div class="line"><a id="l01303" name="l01303"></a><span class="lineno"> 1303</span>        <span class="keywordflow">if</span>( <a class="code hl_function" href="mb__sort_8cc.html#ab5f9325905b9db1cc945f2f8cd5a6513">do_build</a>() )</div>
+<div class="line"><a id="l01304" name="l01304"></a><span class="lineno"> 1304</span>            <a class="code hl_function" href="mb__sort_8cc.html#aab6b0506267cf908785df7061640da3d">do_hist</a>();</div>
+<div class="line"><a id="l01305" name="l01305"></a><span class="lineno"> 1305</span>    }</div>
+<div class="line"><a id="l01306" name="l01306"></a><span class="lineno"> 1306</span> </div>
+<div class="line"><a id="l01307" name="l01307"></a><span class="lineno"> 1307</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;\n\nFinished!\n&quot;</span>;</div>
+<div class="line"><a id="l01308" name="l01308"></a><span class="lineno"> 1308</span>            </div>
+<div class="line"><a id="l01309" name="l01309"></a><span class="lineno"> 1309</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01310" name="l01310"></a><span class="lineno"> 1310</span>    </div>
+<div class="line"><a id="l01311" name="l01311"></a><span class="lineno"> 1311</span>}</div>
 </div>
 <div class="ttc" id="aCDCalibrator_8hh_html"><div class="ttname"><a href="CDCalibrator_8hh.html">CDCalibrator.hh</a></div></div>
 <div class="ttc" id="aCalibration_8hh_html"><div class="ttname"><a href="Calibration_8hh.html">Calibration.hh</a></div></div>
@@ -1455,7 +1463,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassMiniballAngleFitter_html_adc4467d5658aff3e03f2ca2028ee5234"><div class="ttname"><a href="classMiniballAngleFitter.html#adc4467d5658aff3e03f2ca2028ee5234">MiniballAngleFitter::CloseROOTFile</a></div><div class="ttdeci">void CloseROOTFile()</div><div class="ttdef"><b>Definition</b> <a href="MiniballAngleFitter_8hh_source.html#l00138">MiniballAngleFitter.hh:138</a></div></div>
 <div class="ttc" id="aclassMiniballAngleFitter_html_af25806bf9fc30b8dec98f191687adbac"><div class="ttname"><a href="classMiniballAngleFitter.html#af25806bf9fc30b8dec98f191687adbac">MiniballAngleFitter::SaveReactionFile</a></div><div class="ttdeci">void SaveReactionFile(std::string fname)</div><div class="ttdef"><b>Definition</b> <a href="MiniballAngleFitter_8cc_source.html#l00886">MiniballAngleFitter.cc:886</a></div></div>
 <div class="ttc" id="aclassMiniballCDCalibrator_html"><div class="ttname"><a href="classMiniballCDCalibrator.html">MiniballCDCalibrator</a></div><div class="ttdef"><b>Definition</b> <a href="CDCalibrator_8hh_source.html#l00043">CDCalibrator.hh:43</a></div></div>
-<div class="ttc" id="aclassMiniballCDCalibrator_html_a878621884de3149f9a804dff5aa82655"><div class="ttname"><a href="classMiniballCDCalibrator.html#a878621884de3149f9a804dff5aa82655">MiniballCDCalibrator::FillHists</a></div><div class="ttdeci">unsigned long FillHists()</div><div class="ttdef"><b>Definition</b> <a href="CDCalibrator_8cc_source.html#l00307">CDCalibrator.cc:307</a></div></div>
+<div class="ttc" id="aclassMiniballCDCalibrator_html_a878621884de3149f9a804dff5aa82655"><div class="ttname"><a href="classMiniballCDCalibrator.html#a878621884de3149f9a804dff5aa82655">MiniballCDCalibrator::FillHists</a></div><div class="ttdeci">unsigned long FillHists()</div><div class="ttdef"><b>Definition</b> <a href="CDCalibrator_8cc_source.html#l00310">CDCalibrator.cc:310</a></div></div>
 <div class="ttc" id="aclassMiniballCDCalibrator_html_a9c8d831eaf79862fc573cadd1f6ee851"><div class="ttname"><a href="classMiniballCDCalibrator.html#a9c8d831eaf79862fc573cadd1f6ee851">MiniballCDCalibrator::SetInputFile</a></div><div class="ttdeci">void SetInputFile(std::vector&lt; std::string &gt; input_file_names)</div><div class="ttdef"><b>Definition</b> <a href="CDCalibrator_8cc_source.html#l00042">CDCalibrator.cc:42</a></div></div>
 <div class="ttc" id="aclassMiniballCDCalibrator_html_ab654a0ff479b55845e582688e030272e"><div class="ttname"><a href="classMiniballCDCalibrator.html#ab654a0ff479b55845e582688e030272e">MiniballCDCalibrator::SetOutput</a></div><div class="ttdeci">void SetOutput(std::string output_file_name)</div><div class="ttdef"><b>Definition</b> <a href="CDCalibrator_8cc_source.html#l00107">CDCalibrator.cc:107</a></div></div>
 <div class="ttc" id="aclassMiniballCDCalibrator_html_abd01542fccf980bcb16884bec3482eea"><div class="ttname"><a href="classMiniballCDCalibrator.html#abd01542fccf980bcb16884bec3482eea">MiniballCDCalibrator::AddCalibration</a></div><div class="ttdeci">void AddCalibration(std::shared_ptr&lt; MiniballCalibration &gt; mycal)</div><div class="ttdef"><b>Definition</b> <a href="CDCalibrator_8hh_source.html#l00060">CDCalibrator.hh:60</a></div></div>
@@ -1488,7 +1496,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassMiniballMidasConverter_html"><div class="ttname"><a href="classMiniballMidasConverter.html">MiniballMidasConverter</a></div><div class="ttdef"><b>Definition</b> <a href="MidasConverter_8hh_source.html#l00010">MidasConverter.hh:10</a></div></div>
 <div class="ttc" id="aclassMiniballMidasConverter_html_a706ff39fd882806f3c1842642197a5e4"><div class="ttname"><a href="classMiniballMidasConverter.html#a706ff39fd882806f3c1842642197a5e4">MiniballMidasConverter::ConvertFile</a></div><div class="ttdeci">int ConvertFile(std::string input_file_name, unsigned long start_block=0, long end_block=-1)</div><div class="ttdef"><b>Definition</b> <a href="MidasConverter_8cc_source.html#l00908">MidasConverter.cc:908</a></div></div>
 <div class="ttc" id="amb__sort_8cc_html_a012d3e3edd791494c472a00a9c8c5972"><div class="ttname"><a href="mb__sort_8cc.html#a012d3e3edd791494c472a00a9c8c5972">name_set_file</a></div><div class="ttdeci">std::string name_set_file</div><div class="ttdef"><b>Definition</b> <a href="#l00076">mb_sort.cc:76</a></div></div>
-<div class="ttc" id="amb__sort_8cc_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="mb__sort_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="#l00925">mb_sort.cc:925</a></div></div>
+<div class="ttc" id="amb__sort_8cc_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="mb__sort_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="#l00933">mb_sort.cc:933</a></div></div>
 <div class="ttc" id="amb__sort_8cc_html_a105a04c58bd21374ef7ac2c2979808c8"><div class="ttname"><a href="mb__sort_8cc.html#a105a04c58bd21374ef7ac2c2979808c8">flag_events</a></div><div class="ttdeci">bool flag_events</div><div class="ttdef"><b>Definition</b> <a href="#l00084">mb_sort.cc:84</a></div></div>
 <div class="ttc" id="amb__sort_8cc_html_a10fffbe632f5de0454fadba2c16a4028"><div class="ttname"><a href="mb__sort_8cc.html#a10fffbe632f5de0454fadba2c16a4028">myset</a></div><div class="ttdeci">std::shared_ptr&lt; MiniballSettings &gt; myset</div><div class="ttdef"><b>Definition</b> <a href="#l00118">mb_sort.cc:118</a></div></div>
 <div class="ttc" id="amb__sort_8cc_html_a12988e33adf5061bf3d08f37b8edf6ea"><div class="ttname"><a href="mb__sort_8cc.html#a12988e33adf5061bf3d08f37b8edf6ea">conv_mon</a></div><div class="ttdeci">std::shared_ptr&lt; MiniballConverter &gt; conv_mon</div><div class="ttdef"><b>Definition</b> <a href="#l00148">mb_sort.cc:148</a></div></div>
