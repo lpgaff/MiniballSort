@@ -60,10 +60,13 @@ var searchData=
   ['ndata_57',['ndata',['../classMiniballMbsConverter.html#a824d37df99ac5c770fd75f912fd8d5ba',1,'MiniballMbsConverter::ndata'],['../classMiniballMedConverter.html#a52548bfb459dafa5c344bebb24d19052',1,'MiniballMedConverter::ndata']]],
   ['nenergy_58',['nenergy',['../classParticleEvt.html#ad4a1ae5fc58faece3c0a631eb2617453',1,'ParticleEvt']]],
   ['next_5findex_59',['next_index',['../classDataSpy.html#ad15d4da1116c1fc3d79180f2b54ffe09',1,'DataSpy']]],
-  ['npars_60',['npars',['../classMiniballAngleFitter.html#a13c78b389e856ed169d80b70f2adfa29',1,'MiniballAngleFitter']]],
-  ['nsamples_61',['nsamples',['../classMiniballConverter.html#aa109744fc7ed95c591fbc547f292a198',1,'MiniballConverter']]],
-  ['nseg_62',['nseg',['../classMiniballGeometry.html#a3986ac343ab23ae26214955a57fbba2c',1,'MiniballGeometry']]],
-  ['nstrip_63',['nstrip',['../classParticleEvt.html#ae37c84cad540ef7594bcbd1839d3d590',1,'ParticleEvt']]],
-  ['ntime_64',['ntime',['../classParticleEvt.html#a89dbd30aa4491ddaa05e869f03eeaa0b',1,'ParticleEvt']]],
-  ['number_5fof_5fbuffers_65',['number_of_buffers',['../classDataSpy.html#a51c326a0179b1f4ec7fcaf26ecaa8646',1,'DataSpy']]]
+  ['ngain_60',['ngain',['../classMiniballCDCalibrator.html#aa24853bcacd4118c4066e3e231b8996c',1,'MiniballCDCalibrator']]],
+  ['noffset_61',['noffset',['../classMiniballCDCalibrator.html#ae5595bf19fbc7a51128ad3939e1aa8f1',1,'MiniballCDCalibrator']]],
+  ['npars_62',['npars',['../classMiniballAngleFitter.html#a13c78b389e856ed169d80b70f2adfa29',1,'MiniballAngleFitter']]],
+  ['nsamples_63',['nsamples',['../classMiniballConverter.html#aa109744fc7ed95c591fbc547f292a198',1,'MiniballConverter']]],
+  ['nseg_64',['nseg',['../classMiniballGeometry.html#a3986ac343ab23ae26214955a57fbba2c',1,'MiniballGeometry']]],
+  ['nstrip_65',['nstrip',['../classParticleEvt.html#ae37c84cad540ef7594bcbd1839d3d590',1,'ParticleEvt']]],
+  ['ntag_66',['ntag',['../classMiniballCDCalibrator.html#a19fbee395f9cbb2399922bf0accae7dc',1,'MiniballCDCalibrator']]],
+  ['ntime_67',['ntime',['../classParticleEvt.html#a89dbd30aa4491ddaa05e869f03eeaa0b',1,'ParticleEvt']]],
+  ['number_5fof_5fbuffers_68',['number_of_buffers',['../classDataSpy.html#a51c326a0179b1f4ec7fcaf26ecaa8646',1,'DataSpy']]]
 ];

@@ -110,8 +110,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab2d1793e86fe5157c60ba32550ac751c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebbb50725965b67cc9c6e9e0730e12c7" id="r_aebbb50725965b67cc9c6e9e0730e12c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebbb50725965b67cc9c6e9e0730e12c7">SetMBSInfoTree</a> (TTree *user_tree)</td></tr>
 <tr class="separator:aebbb50725965b67cc9c6e9e0730e12c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab654a0ff479b55845e582688e030272e" id="r_ab654a0ff479b55845e582688e030272e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab654a0ff479b55845e582688e030272e">SetOutput</a> (std::string output_file_name)</td></tr>
-<tr class="separator:ab654a0ff479b55845e582688e030272e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16aac89dd070aab7b4b28c3ba2aa7141" id="r_a16aac89dd070aab7b4b28c3ba2aa7141"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16aac89dd070aab7b4b28c3ba2aa7141">SetOutput</a> (std::string output_file_name, bool cWrite=false)</td></tr>
+<tr class="separator:a16aac89dd070aab7b4b28c3ba2aa7141"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad07540768832e52fb52b52dc00f11df6" id="r_ad07540768832e52fb52b52dc00f11df6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad07540768832e52fb52b52dc00f11df6">StartFile</a> ()</td></tr>
 <tr class="memdesc:ad07540768832e52fb52b52dc00f11df6"><td class="mdescLeft">&#160;</td><td class="mdescRight">called for every file  <br /></td></tr>
 <tr class="separator:ad07540768832e52fb52b52dc00f11df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,6 +126,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abd01542fccf980bcb16884bec3482eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d828c512a497f874d647e53150cf98d" id="r_a8d828c512a497f874d647e53150cf98d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d828c512a497f874d647e53150cf98d">AddProgressBar</a> (std::shared_ptr&lt; TGProgressBar &gt; myprog)</td></tr>
 <tr class="separator:a8d828c512a497f874d647e53150cf98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fc081c9aaeac6f14790b91e95dc94a9" id="r_a9fc081c9aaeac6f14790b91e95dc94a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fc081c9aaeac6f14790b91e95dc94a9">SetPsideTagId</a> (unsigned char id)</td></tr>
+<tr class="separator:a9fc081c9aaeac6f14790b91e95dc94a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53ec94970e617c05157b62debe4adca2" id="r_a53ec94970e617c05157b62debe4adca2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53ec94970e617c05157b62debe4adca2">SetNsideTagId</a> (unsigned char id)</td></tr>
+<tr class="separator:a53ec94970e617c05157b62debe4adca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e1b66d59bb0d4874d47895b80c601b" id="r_a69e1b66d59bb0d4874d47895b80c601b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69e1b66d59bb0d4874d47895b80c601b">CalibratePsides</a> ()</td></tr>
+<tr class="separator:a69e1b66d59bb0d4874d47895b80c601b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c658f1cff1539b6558a4595f70198b9" id="r_a2c658f1cff1539b6558a4595f70198b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c658f1cff1539b6558a4595f70198b9">CalibrateNsides</a> ()</td></tr>
+<tr class="separator:a2c658f1cff1539b6558a4595f70198b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65a837c86d3f0eb8c03bcbb5f1b339ca" id="r_a65a837c86d3f0eb8c03bcbb5f1b339ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65a837c86d3f0eb8c03bcbb5f1b339ca">FindCDChannels</a> (int det, int sec, int side, int strip, int &amp;adc, int &amp;ch)</td></tr>
+<tr class="separator:a65a837c86d3f0eb8c03bcbb5f1b339ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbf91ea1450b888cb3a34b31a87ca43b" id="r_acbf91ea1450b888cb3a34b31a87ca43b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbf91ea1450b888cb3a34b31a87ca43b">FindCDChannels</a> (int det, int sec, int side, int strip, int &amp;sfp, int &amp;board, int &amp;ch)</td></tr>
+<tr class="separator:acbf91ea1450b888cb3a34b31a87ca43b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a878621884de3149f9a804dff5aa82655" id="r_a878621884de3149f9a804dff5aa82655"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a878621884de3149f9a804dff5aa82655">FillHists</a> ()</td></tr>
 <tr class="separator:a878621884de3149f9a804dff5aa82655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69f941dba7311fa612ab512b12ce38b3" id="r_a69f941dba7311fa612ab512b12ce38b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69f941dba7311fa612ab512b12ce38b3">FillPixelHists</a> ()</td></tr>
@@ -147,9 +159,9 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a03f1e7a42be9438e3bc1c031276b5397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb9ae01d54be49df00236eb91ca5f57d" id="r_aeb9ae01d54be49df00236eb91ca5f57d"><td class="memItemLeft" align="right" valign="top">TChain *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb9ae01d54be49df00236eb91ca5f57d">mbsinfo_tree</a></td></tr>
 <tr class="separator:aeb9ae01d54be49df00236eb91ca5f57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8637d4011ed978119a3b6ebbdfbdc30" id="r_ae8637d4011ed978119a3b6ebbdfbdc30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMiniballDataPackets.html">MiniballDataPackets</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8637d4011ed978119a3b6ebbdfbdc30">in_data</a></td></tr>
+<tr class="memitem:ae8637d4011ed978119a3b6ebbdfbdc30" id="r_ae8637d4011ed978119a3b6ebbdfbdc30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMiniballDataPackets.html">MiniballDataPackets</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8637d4011ed978119a3b6ebbdfbdc30">in_data</a> = nullptr</td></tr>
 <tr class="separator:ae8637d4011ed978119a3b6ebbdfbdc30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a547ec19bd7484ae1ee7a6b79289fa4f4" id="r_a547ec19bd7484ae1ee7a6b79289fa4f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMBSInfoPackets.html">MBSInfoPackets</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a547ec19bd7484ae1ee7a6b79289fa4f4">mbs_info</a></td></tr>
+<tr class="memitem:a547ec19bd7484ae1ee7a6b79289fa4f4" id="r_a547ec19bd7484ae1ee7a6b79289fa4f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMBSInfoPackets.html">MBSInfoPackets</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a547ec19bd7484ae1ee7a6b79289fa4f4">mbs_info</a> = nullptr</td></tr>
 <tr class="separator:a547ec19bd7484ae1ee7a6b79289fa4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6774b25e2fa2f78df73eac3d9d557f0" id="r_ae6774b25e2fa2f78df73eac3d9d557f0"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classDgfData.html">DgfData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6774b25e2fa2f78df73eac3d9d557f0">dgf_data</a></td></tr>
 <tr class="separator:ae6774b25e2fa2f78df73eac3d9d557f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +174,8 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:aee9bce796e0fd89ad7b76ef6d64297ab" id="r_aee9bce796e0fd89ad7b76ef6d64297ab"><td class="memItemLeft" align="right" valign="top">TFile *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee9bce796e0fd89ad7b76ef6d64297ab">output_file</a></td></tr>
 <tr class="memdesc:aee9bce796e0fd89ad7b76ef6d64297ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs.  <br /></td></tr>
 <tr class="separator:aee9bce796e0fd89ad7b76ef6d64297ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49322065f3fabe37f8d729a39b903b31" id="r_a49322065f3fabe37f8d729a39b903b31"><td class="memItemLeft" align="right" valign="top">std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49322065f3fabe37f8d729a39b903b31">output_cal</a></td></tr>
+<tr class="separator:a49322065f3fabe37f8d729a39b903b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94e118a258bdd50e5956bebdad830fb6" id="r_a94e118a258bdd50e5956bebdad830fb6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classMiniballCalibration.html">MiniballCalibration</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94e118a258bdd50e5956bebdad830fb6">cal</a></td></tr>
 <tr class="separator:a94e118a258bdd50e5956bebdad830fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3292d9e8058945567f7220062850669" id="r_ae3292d9e8058945567f7220062850669"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3292d9e8058945567f7220062850669">overwrite_cal</a></td></tr>
@@ -255,22 +269,36 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:aa342db84476db1a527f1fd730ecff450" id="r_aa342db84476db1a527f1fd730ecff450"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa342db84476db1a527f1fd730ecff450">cd_strip_list</a></td></tr>
 <tr class="memdesc:aa342db84476db1a527f1fd730ecff450"><td class="mdescLeft">&#160;</td><td class="mdescRight">list of CD strip IDs  <br /></td></tr>
 <tr class="separator:aa342db84476db1a527f1fd730ecff450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11632f3efc7f584a9cdbcdae0f268d87" id="r_a11632f3efc7f584a9cdbcdae0f268d87"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11632f3efc7f584a9cdbcdae0f268d87">ptag</a> = 0</td></tr>
+<tr class="separator:a11632f3efc7f584a9cdbcdae0f268d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19fbee395f9cbb2399922bf0accae7dc" id="r_a19fbee395f9cbb2399922bf0accae7dc"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19fbee395f9cbb2399922bf0accae7dc">ntag</a> = 0</td></tr>
+<tr class="separator:a19fbee395f9cbb2399922bf0accae7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5595bf19fbc7a51128ad3939e1aa8f1" id="r_ae5595bf19fbc7a51128ad3939e1aa8f1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5595bf19fbc7a51128ad3939e1aa8f1">noffset</a> = 0.0</td></tr>
+<tr class="separator:ae5595bf19fbc7a51128ad3939e1aa8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa24853bcacd4118c4066e3e231b8996c" id="r_aa24853bcacd4118c4066e3e231b8996c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa24853bcacd4118c4066e3e231b8996c">ngain</a> = 1.0</td></tr>
+<tr class="separator:aa24853bcacd4118c4066e3e231b8996c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e70c619c807869d5b96e34dc860977" id="r_ad7e70c619c807869d5b96e34dc860977"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7e70c619c807869d5b96e34dc860977">poffset</a> = 0.0</td></tr>
+<tr class="separator:ad7e70c619c807869d5b96e34dc860977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29fd8c176a76645cdf270c2db4378e42" id="r_a29fd8c176a76645cdf270c2db4378e42"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29fd8c176a76645cdf270c2db4378e42">pgain</a> = 1.0</td></tr>
+<tr class="separator:a29fd8c176a76645cdf270c2db4378e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e347952c21f81c2fafb47a312065ade" id="r_a2e347952c21f81c2fafb47a312065ade"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e347952c21f81c2fafb47a312065ade">hit_ctr</a></td></tr>
 <tr class="separator:a2e347952c21f81c2fafb47a312065ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8274028a1553d28b4fabee5204694a92" id="r_a8274028a1553d28b4fabee5204694a92"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8274028a1553d28b4fabee5204694a92">n_entries</a></td></tr>
 <tr class="separator:a8274028a1553d28b4fabee5204694a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fee6d89e73fefeb760ce487f70acda1" id="r_a9fee6d89e73fefeb760ce487f70acda1"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fee6d89e73fefeb760ce487f70acda1">n_mbs_entries</a></td></tr>
 <tr class="separator:a9fee6d89e73fefeb760ce487f70acda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd6d7a39854ff05aa2963a384483c7aa" id="r_afd6d7a39854ff05aa2963a384483c7aa"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; std::vector&lt; std::vector&lt; TH2F * &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd6d7a39854ff05aa2963a384483c7aa">cd_pen_nen</a></td></tr>
-<tr class="separator:afd6d7a39854ff05aa2963a384483c7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55777167b7fe1b54dfe3e9fd943a013a" id="r_a55777167b7fe1b54dfe3e9fd943a013a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; std::vector&lt; std::vector&lt; TH2F * &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55777167b7fe1b54dfe3e9fd943a013a">cd_pQ_nen</a></td></tr>
-<tr class="separator:a55777167b7fe1b54dfe3e9fd943a013a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1638f12b91daf2714c5f915e2a57d8ac" id="r_a1638f12b91daf2714c5f915e2a57d8ac"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; std::vector&lt; std::vector&lt; TH2F * &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1638f12b91daf2714c5f915e2a57d8ac">cd_pen_nQ</a></td></tr>
-<tr class="separator:a1638f12b91daf2714c5f915e2a57d8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79327eaebcc78c537e63b978cd2a5656" id="r_a79327eaebcc78c537e63b978cd2a5656"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; std::vector&lt; TH2F * &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79327eaebcc78c537e63b978cd2a5656">cd_pen_nen</a></td></tr>
+<tr class="separator:a79327eaebcc78c537e63b978cd2a5656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee67b3df7abcc940fb0dbf5d6c58bda4" id="r_aee67b3df7abcc940fb0dbf5d6c58bda4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; std::vector&lt; TH2F * &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee67b3df7abcc940fb0dbf5d6c58bda4">cd_nen_pen</a></td></tr>
+<tr class="separator:aee67b3df7abcc940fb0dbf5d6c58bda4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c674ddbf66591769ff40a466c4b684" id="r_a46c674ddbf66591769ff40a466c4b684"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; std::vector&lt; TH2F * &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46c674ddbf66591769ff40a466c4b684">cd_pen_nQ</a></td></tr>
+<tr class="separator:a46c674ddbf66591769ff40a466c4b684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9338d041095b3eef18332e2121b70c36" id="r_a9338d041095b3eef18332e2121b70c36"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; std::vector&lt; TH2F * &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9338d041095b3eef18332e2121b70c36">cd_nQ_pQ</a></td></tr>
+<tr class="separator:a9338d041095b3eef18332e2121b70c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00043">43</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00044">44</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7ea66034c7d7947eba4faf16071efc2f" name="a7ea66034c7d7947eba4faf16071efc2f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7ea66034c7d7947eba4faf16071efc2f">&#9670;&#160;</a></span>MiniballCDCalibrator()</h2>
@@ -314,7 +342,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00048">48</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00049">49</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
 </div>
 </div>
@@ -342,9 +370,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00060">60</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00061">61</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00873">do_cdcal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00878">do_cdcal()</a>.</p>
 
 </div>
 </div>
@@ -371,7 +399,49 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00064">64</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00065">65</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+
+</div>
+</div>
+<a id="a2c658f1cff1539b6558a4595f70198b9" name="a2c658f1cff1539b6558a4595f70198b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c658f1cff1539b6558a4595f70198b9">&#9670;&#160;</a></span>CalibrateNsides()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiniballCDCalibrator::CalibrateNsides </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00428">428</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
+
+</div>
+</div>
+<a id="a69e1b66d59bb0d4874d47895b80c601b" name="a69e1b66d59bb0d4874d47895b80c601b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e1b66d59bb0d4874d47895b80c601b">&#9670;&#160;</a></span>CalibratePsides()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiniballCDCalibrator::CalibratePsides </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00354">354</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -398,9 +468,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00073">73</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00082">82</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00873">do_cdcal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00878">do_cdcal()</a>.</p>
 
 </div>
 </div>
@@ -420,9 +490,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Function to loop over the sort tree and build array and recoil events</p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00310">310</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00569">569</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00873">do_cdcal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00878">do_cdcal()</a>.</p>
 
 </div>
 </div>
@@ -441,9 +511,102 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00255">255</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00501">501</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
+
+</div>
+</div>
+<a id="a65a837c86d3f0eb8c03bcbb5f1b339ca" name="a65a837c86d3f0eb8c03bcbb5f1b339ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65a837c86d3f0eb8c03bcbb5f1b339ca">&#9670;&#160;</a></span>FindCDChannels() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MiniballCDCalibrator::FindCDChannels </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>det</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>side</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>strip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>adc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>ch</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00272">272</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00428">CalibrateNsides()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00354">CalibratePsides()</a>.</p>
+
+</div>
+</div>
+<a id="acbf91ea1450b888cb3a34b31a87ca43b" name="acbf91ea1450b888cb3a34b31a87ca43b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbf91ea1450b888cb3a34b31a87ca43b">&#9670;&#160;</a></span>FindCDChannels() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MiniballCDCalibrator::FindCDChannels </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>det</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>side</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>strip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>sfp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>board</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>ch</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00310">310</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
 
 </div>
 </div>
@@ -470,7 +633,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00072">72</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00081">81</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
 </div>
 </div>
@@ -492,9 +655,9 @@ Private Attributes</h2></td></tr>
 <p>called for every event </p>
 <p>This is called at the end of every execution/loop</p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00122">122</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00127">127</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -513,7 +676,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00143">143</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00149">149</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00107">SetOutput()</a>.</p>
 
@@ -544,9 +707,9 @@ Private Attributes</h2></td></tr>
 
 <p>Closes the output files from this class. </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00086">86</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00091">91</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00073">CloseOutput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00082">CloseOutput()</a>.</p>
 
 </div>
 </div>
@@ -565,7 +728,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00238">238</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00255">255</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
 
 </div>
 </div>
@@ -606,7 +769,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00042">42</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00873">do_cdcal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00878">do_cdcal()</a>.</p>
 
 </div>
 </div>
@@ -652,8 +815,37 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab654a0ff479b55845e582688e030272e" name="ab654a0ff479b55845e582688e030272e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab654a0ff479b55845e582688e030272e">&#9670;&#160;</a></span>SetOutput()</h2>
+<a id="a53ec94970e617c05157b62debe4adca2" name="a53ec94970e617c05157b62debe4adca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53ec94970e617c05157b62debe4adca2">&#9670;&#160;</a></span>SetNsideTagId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiniballCDCalibrator::SetNsideTagId </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00071">71</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00878">do_cdcal()</a>.</p>
+
+</div>
+</div>
+<a id="a16aac89dd070aab7b4b28c3ba2aa7141" name="a16aac89dd070aab7b4b28c3ba2aa7141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16aac89dd070aab7b4b28c3ba2aa7141">&#9670;&#160;</a></span>SetOutput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -661,15 +853,48 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void MiniballCDCalibrator::SetOutput </td>
           <td>(</td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>output_file_name</em></span></td><td>)</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>output_file_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>cWrite</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="CDCalibrator_8cc_source.html#l00107">107</a> of file <a class="el" href="CDCalibrator_8cc_source.html">CDCalibrator.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00873">do_cdcal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00878">do_cdcal()</a>.</p>
+
+</div>
+</div>
+<a id="a9fc081c9aaeac6f14790b91e95dc94a9" name="a9fc081c9aaeac6f14790b91e95dc94a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc081c9aaeac6f14790b91e95dc94a9">&#9670;&#160;</a></span>SetPsideTagId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiniballCDCalibrator::SetPsideTagId </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00070">70</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="mb__sort_8cc_source.html#l00878">do_cdcal()</a>.</p>
 
 </div>
 </div>
@@ -717,9 +942,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00117">117</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00123">123</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00064">AddProgressBar()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00003">MiniballCDCalibrator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00065">AddProgressBar()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00003">MiniballCDCalibrator()</a>.</p>
 
 </div>
 </div>
@@ -743,9 +968,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00102">102</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00107">107</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -769,9 +994,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00130">130</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00136">136</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00003">MiniballCDCalibrator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00003">MiniballCDCalibrator()</a>.</p>
 
 </div>
 </div>
@@ -795,9 +1020,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00110">110</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00116">116</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00060">AddCalibration()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00143">MakeHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00061">AddCalibration()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00149">MakeHists()</a>.</p>
 
 </div>
 </div>
@@ -823,9 +1048,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of CD detector IDs </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00161">161</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00167">167</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00255">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00122">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00501">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00127">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -851,14 +1076,14 @@ Private Attributes</h2></td></tr>
 
 <p>list of CD energies for ParticleFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00158">158</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00164">164</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00255">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00122">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00501">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00127">Initialise()</a>.</p>
 
 </div>
 </div>
-<a id="afd6d7a39854ff05aa2963a384483c7aa" name="afd6d7a39854ff05aa2963a384483c7aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd6d7a39854ff05aa2963a384483c7aa">&#9670;&#160;</a></span>cd_pen_nen</h2>
+<a id="aee67b3df7abcc940fb0dbf5d6c58bda4" name="aee67b3df7abcc940fb0dbf5d6c58bda4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee67b3df7abcc940fb0dbf5d6c58bda4">&#9670;&#160;</a></span>cd_nen_pen</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -867,7 +1092,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;std::vector&lt;std::vector&lt;TH2F*&gt; &gt; &gt; &gt; MiniballCDCalibrator::cd_pen_nen</td>
+          <td class="memname">std::vector&lt;std::vector&lt;std::vector&lt;TH2F*&gt; &gt; &gt; MiniballCDCalibrator::cd_nen_pen</td>
         </tr>
       </table>
   </td>
@@ -877,14 +1102,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00173">173</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00189">189</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00255">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00143">MakeHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00501">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00149">MakeHists()</a>.</p>
 
 </div>
 </div>
-<a id="a1638f12b91daf2714c5f915e2a57d8ac" name="a1638f12b91daf2714c5f915e2a57d8ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1638f12b91daf2714c5f915e2a57d8ac">&#9670;&#160;</a></span>cd_pen_nQ</h2>
+<a id="a9338d041095b3eef18332e2121b70c36" name="a9338d041095b3eef18332e2121b70c36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9338d041095b3eef18332e2121b70c36">&#9670;&#160;</a></span>cd_nQ_pQ</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -893,7 +1118,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;std::vector&lt;std::vector&lt;TH2F*&gt; &gt; &gt; &gt; MiniballCDCalibrator::cd_pen_nQ</td>
+          <td class="memname">std::vector&lt;std::vector&lt;std::vector&lt;TH2F*&gt; &gt; &gt; MiniballCDCalibrator::cd_nQ_pQ</td>
         </tr>
       </table>
   </td>
@@ -903,14 +1128,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00175">175</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00191">191</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00255">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00143">MakeHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00354">CalibratePsides()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00501">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00149">MakeHists()</a>.</p>
 
 </div>
 </div>
-<a id="a55777167b7fe1b54dfe3e9fd943a013a" name="a55777167b7fe1b54dfe3e9fd943a013a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55777167b7fe1b54dfe3e9fd943a013a">&#9670;&#160;</a></span>cd_pQ_nen</h2>
+<a id="a79327eaebcc78c537e63b978cd2a5656" name="a79327eaebcc78c537e63b978cd2a5656"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79327eaebcc78c537e63b978cd2a5656">&#9670;&#160;</a></span>cd_pen_nen</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -919,7 +1144,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;std::vector&lt;std::vector&lt;TH2F*&gt; &gt; &gt; &gt; MiniballCDCalibrator::cd_pQ_nen</td>
+          <td class="memname">std::vector&lt;std::vector&lt;std::vector&lt;TH2F*&gt; &gt; &gt; MiniballCDCalibrator::cd_pen_nen</td>
         </tr>
       </table>
   </td>
@@ -929,9 +1154,35 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00174">174</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00188">188</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00255">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00143">MakeHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00501">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00149">MakeHists()</a>.</p>
+
+</div>
+</div>
+<a id="a46c674ddbf66591769ff40a466c4b684" name="a46c674ddbf66591769ff40a466c4b684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46c674ddbf66591769ff40a466c4b684">&#9670;&#160;</a></span>cd_pen_nQ</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::vector&lt;std::vector&lt;TH2F*&gt; &gt; &gt; MiniballCDCalibrator::cd_pen_nQ</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00190">190</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00428">CalibrateNsides()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00501">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00149">MakeHists()</a>.</p>
 
 </div>
 </div>
@@ -957,9 +1208,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of CD uncalibrated energies for ParticleFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00159">159</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00165">165</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00255">FillPixelHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00501">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00127">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -985,9 +1236,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of CD sector IDs </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00162">162</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00168">168</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00255">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00122">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00501">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00127">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -1013,9 +1264,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of CD side IDs; 0 = p, 1 = n </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00163">163</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00169">169</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00255">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00122">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00501">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00127">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -1041,9 +1292,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of CD strip IDs </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00164">164</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00170">170</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00255">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00122">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00501">FillPixelHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00127">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -1069,9 +1320,9 @@ Private Attributes</h2></td></tr>
 
 <p>list of CD timestamps for ParticleFinder </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00160">160</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00166">166</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00122">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00127">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -1095,7 +1346,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00101">101</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00106">106</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
 </div>
 </div>
@@ -1119,9 +1370,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00134">134</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00140">140</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00122">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00127">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -1145,9 +1396,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00103">103</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00108">108</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -1173,9 +1424,9 @@ Private Attributes</h2></td></tr>
 
 <p>length of build window in ns </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00133">133</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00139">139</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00122">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00127">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -1199,7 +1450,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00127">127</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00133">133</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00003">MiniballCDCalibrator()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00063">SetInputFile()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00042">SetInputFile()</a>.</p>
 
@@ -1225,9 +1476,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00124">124</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00130">130</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00143">MakeHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00003">MiniballCDCalibrator()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00238">ResetHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00149">MakeHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00003">MiniballCDCalibrator()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00255">ResetHists()</a>.</p>
 
 </div>
 </div>
@@ -1251,9 +1502,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00121">121</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00127">127</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00143">MakeHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00149">MakeHists()</a>.</p>
 
 </div>
 </div>
@@ -1277,9 +1528,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00168">168</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00183">183</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00122">Initialise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00127">Initialise()</a>.</p>
 
 </div>
 </div>
@@ -1293,7 +1544,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMiniballDataPackets.html">MiniballDataPackets</a>* MiniballCDCalibrator::in_data</td>
+          <td class="memname"><a class="el" href="classMiniballDataPackets.html">MiniballDataPackets</a>* MiniballCDCalibrator::in_data = nullptr</td>
         </tr>
       </table>
   </td>
@@ -1303,9 +1554,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00099">99</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00104">104</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00073">CloseOutput()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00042">SetInputFile()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00085">SetInputTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00042">SetInputFile()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00085">SetInputTree()</a>.</p>
 
 </div>
 </div>
@@ -1329,7 +1580,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00104">104</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00109">109</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
 </div>
 </div>
@@ -1355,9 +1606,9 @@ Private Attributes</h2></td></tr>
 
 <p>Input tree. </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00096">96</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00101">101</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00073">CloseOutput()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00063">SetInputFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00063">SetInputFile()</a>.</p>
 
 </div>
 </div>
@@ -1381,9 +1632,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00097">97</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00102">102</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00073">CloseOutput()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, <a class="el" href="CDCalibrator_8hh_source.html#l00086">PurgeOutput()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00042">SetInputFile()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00085">SetInputTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, <a class="el" href="CDCalibrator_8hh_source.html#l00091">PurgeOutput()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00042">SetInputFile()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00085">SetInputTree()</a>.</p>
 
 </div>
 </div>
@@ -1397,7 +1648,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMBSInfoPackets.html">MBSInfoPackets</a>* MiniballCDCalibrator::mbs_info</td>
+          <td class="memname"><a class="el" href="classMBSInfoPackets.html">MBSInfoPackets</a>* MiniballCDCalibrator::mbs_info = nullptr</td>
         </tr>
       </table>
   </td>
@@ -1407,9 +1658,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00100">100</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00105">105</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00073">CloseOutput()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00042">SetInputFile()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00096">SetMBSInfoTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00042">SetInputFile()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00096">SetMBSInfoTree()</a>.</p>
 
 </div>
 </div>
@@ -1433,9 +1684,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00098">98</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00103">103</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00073">CloseOutput()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, <a class="el" href="CDCalibrator_8hh_source.html#l00086">PurgeOutput()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00042">SetInputFile()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00096">SetMBSInfoTree()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, <a class="el" href="CDCalibrator_8hh_source.html#l00091">PurgeOutput()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00042">SetInputFile()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00096">SetMBSInfoTree()</a>.</p>
 
 </div>
 </div>
@@ -1461,9 +1712,9 @@ Private Attributes</h2></td></tr>
 
 <p>ADC module number. </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00144">144</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00150">150</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -1489,9 +1740,9 @@ Private Attributes</h2></td></tr>
 
 <p>febex board number </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00142">142</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00148">148</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -1517,9 +1768,9 @@ Private Attributes</h2></td></tr>
 
 <p>channel number </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00145">145</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00151">151</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -1545,9 +1796,9 @@ Private Attributes</h2></td></tr>
 
 <p>clipped flag? </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00154">154</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00160">160</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -1573,9 +1824,9 @@ Private Attributes</h2></td></tr>
 
 <p>calibrated energy </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00151">151</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00157">157</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -1601,9 +1852,9 @@ Private Attributes</h2></td></tr>
 
 <p><a class="el" href="classMBS.html">MBS</a> event id. </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00148">148</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00154">154</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -1629,9 +1880,9 @@ Private Attributes</h2></td></tr>
 
 <p><a class="el" href="classMBS.html">MBS</a> event time. </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00150">150</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00156">156</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -1657,9 +1908,9 @@ Private Attributes</h2></td></tr>
 
 <p>hit time with respect to event time </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00147">147</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00153">153</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -1685,9 +1936,9 @@ Private Attributes</h2></td></tr>
 
 <p>pileup flag? </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00153">153</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00159">159</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -1713,9 +1964,9 @@ Private Attributes</h2></td></tr>
 
 <p>sfp number </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00141">141</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00147">147</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -1741,9 +1992,9 @@ Private Attributes</h2></td></tr>
 
 <p>above threshold? </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00152">152</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00158">158</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -1769,9 +2020,9 @@ Private Attributes</h2></td></tr>
 
 <p>absolute timestamp </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00146">146</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00152">152</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -1795,9 +2046,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00169">169</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00184">184</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -1821,9 +2072,113 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00170">170</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00185">185</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
+
+</div>
+</div>
+<a id="aa24853bcacd4118c4066e3e231b8996c" name="aa24853bcacd4118c4066e3e231b8996c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa24853bcacd4118c4066e3e231b8996c">&#9670;&#160;</a></span>ngain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MiniballCDCalibrator::ngain = 1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00178">178</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00428">CalibrateNsides()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00354">CalibratePsides()</a>.</p>
+
+</div>
+</div>
+<a id="ae5595bf19fbc7a51128ad3939e1aa8f1" name="ae5595bf19fbc7a51128ad3939e1aa8f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5595bf19fbc7a51128ad3939e1aa8f1">&#9670;&#160;</a></span>noffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MiniballCDCalibrator::noffset = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00177">177</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00428">CalibrateNsides()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00354">CalibratePsides()</a>.</p>
+
+</div>
+</div>
+<a id="a19fbee395f9cbb2399922bf0accae7dc" name="a19fbee395f9cbb2399922bf0accae7dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19fbee395f9cbb2399922bf0accae7dc">&#9670;&#160;</a></span>ntag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char MiniballCDCalibrator::ntag = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00174">174</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00428">CalibrateNsides()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00501">FillPixelHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00149">MakeHists()</a>, and <a class="el" href="CDCalibrator_8hh_source.html#l00071">SetNsideTagId()</a>.</p>
+
+</div>
+</div>
+<a id="a49322065f3fabe37f8d729a39b903b31" name="a49322065f3fabe37f8d729a39b903b31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49322065f3fabe37f8d729a39b903b31">&#9670;&#160;</a></span>output_cal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ofstream MiniballCDCalibrator::output_cal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00113">113</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00428">CalibrateNsides()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00354">CalibratePsides()</a>, <a class="el" href="CDCalibrator_8hh_source.html#l00082">CloseOutput()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00107">SetOutput()</a>.</p>
 
 </div>
 </div>
@@ -1849,9 +2204,9 @@ Private Attributes</h2></td></tr>
 
 <p>Outputs. </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00107">107</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00112">112</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00073">CloseOutput()</a>, <a class="el" href="CDCalibrator_8hh_source.html#l00072">GetFile()</a>, <a class="el" href="CDCalibrator_8hh_source.html#l00086">PurgeOutput()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00107">SetOutput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00082">CloseOutput()</a>, <a class="el" href="CDCalibrator_8hh_source.html#l00081">GetFile()</a>, <a class="el" href="CDCalibrator_8hh_source.html#l00091">PurgeOutput()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00107">SetOutput()</a>.</p>
 
 </div>
 </div>
@@ -1875,9 +2230,61 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00111">111</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00117">117</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00060">AddCalibration()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00003">MiniballCDCalibrator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00061">AddCalibration()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00003">MiniballCDCalibrator()</a>.</p>
+
+</div>
+</div>
+<a id="a29fd8c176a76645cdf270c2db4378e42" name="a29fd8c176a76645cdf270c2db4378e42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29fd8c176a76645cdf270c2db4378e42">&#9670;&#160;</a></span>pgain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MiniballCDCalibrator::pgain = 1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00180">180</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00354">CalibratePsides()</a>.</p>
+
+</div>
+</div>
+<a id="ad7e70c619c807869d5b96e34dc860977" name="ad7e70c619c807869d5b96e34dc860977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e70c619c807869d5b96e34dc860977">&#9670;&#160;</a></span>poffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MiniballCDCalibrator::poffset = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00179">179</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00354">CalibratePsides()</a>.</p>
 
 </div>
 </div>
@@ -1903,9 +2310,9 @@ Private Attributes</h2></td></tr>
 
 <p>previous <a class="el" href="classMBS.html">MBS</a> event id </p>
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00149">149</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00155">155</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00003">MiniballCDCalibrator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00003">MiniballCDCalibrator()</a>.</p>
 
 </div>
 </div>
@@ -1929,9 +2336,35 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00118">118</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00124">124</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00064">AddProgressBar()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8hh_source.html#l00065">AddProgressBar()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
+
+</div>
+</div>
+<a id="a11632f3efc7f584a9cdbcdae0f268d87" name="a11632f3efc7f584a9cdbcdae0f268d87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11632f3efc7f584a9cdbcdae0f268d87">&#9670;&#160;</a></span>ptag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char MiniballCDCalibrator::ptag = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00173">173</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00354">CalibratePsides()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00501">FillPixelHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00149">MakeHists()</a>, and <a class="el" href="CDCalibrator_8hh_source.html#l00070">SetPsideTagId()</a>.</p>
 
 </div>
 </div>
@@ -1955,9 +2388,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00114">114</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00120">120</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00255">FillPixelHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00143">MakeHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00003">MiniballCDCalibrator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00428">CalibrateNsides()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00354">CalibratePsides()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00501">FillPixelHists()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00272">FindCDChannels()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00310">FindCDChannels()</a>, <a class="el" href="CDCalibrator_8cc_source.html#l00149">MakeHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00003">MiniballCDCalibrator()</a>.</p>
 
 </div>
 </div>
@@ -1981,9 +2414,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00137">137</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00143">143</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>.</p>
 
 </div>
 </div>
@@ -2007,9 +2440,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00138">138</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00144">144</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00030">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00030">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -2033,9 +2466,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00138">138</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00144">144</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00030">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00030">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -2059,9 +2492,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00138">138</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00144">144</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00030">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00030">StartFile()</a>.</p>
 
 </div>
 </div>
@@ -2085,9 +2518,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00138">138</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CDCalibrator_8hh_source.html#l00144">144</a> of file <a class="el" href="CDCalibrator_8hh_source.html">CDCalibrator.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00310">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00030">StartFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CDCalibrator_8cc_source.html#l00569">FillHists()</a>, and <a class="el" href="CDCalibrator_8cc_source.html#l00030">StartFile()</a>.</p>
 
 </div>
 </div>
