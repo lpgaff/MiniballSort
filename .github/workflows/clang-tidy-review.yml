@@ -1,0 +1,41 @@
+name: clang-tidy-review
+
+# Eventually, this should only be pull_request, but push is done here for testing
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: rootproject/root
+
+    steps:
+      - run: echo "Job triggered by ${{ github.event_name }} event."
+      - run: echo "Repo '${{ github.ref }}' branch '${{ github.repository }}'."
+      - uses: actions/checkout@v4
+      - name: Install packages
+        run: |
+          apt update -yq > /dev/null
+          apt install -y --no-install-recommends bear
+      - name: make
+        run: bear -- make
+      - name: Set base_dir
+        run: echo "base_dir=$(pwd)" >> $GITHUB_ENV
+
+      - uses: ZedThree/clang-tidy-review@v0.21.0
+        id: review
+        with:
+          base_dir: ${{ env.base_dir }}
+          clang_tidy_checks: "-*,performance-*,readability-*,bugprone-*"
+          include: "${base_dir}/mbsort.cc,${base_dir}/src/*.cc"
+          extra_arguments: "-header-filter='${base_dir}/mb_sort.hh,${base_dir}/include/*.hh'"
+
+      # Uploads an artefact containing clang_fixes.json
+      - uses: ZedThree/clang-tidy-review/upload@v0.21.0
+        id: upload-review
+
+      # If there are any comments, fail the check
+      - if: steps.review.outputs.total_comments > 0
+        run: exit 1

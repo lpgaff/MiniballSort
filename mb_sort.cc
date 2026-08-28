@@ -1043,7 +1043,7 @@ int main( int argc, char *argv[] ){
 
 
 	// Check if it should be MIDAS, MBS or MED format
-	if( !flag_midas && !flag_mbs && !flag_med && !flag_spy && !name_angle_file.length() ){
+	if( !flag_midas && !flag_mbs && !flag_med && !flag_spy && name_angle_file.empty() && !input_names.empty() ){
 
 		std::string extension = input_names.at(0).substr( input_names.at(0).find_last_of(".")+1,
 														 input_names.at(0).length()-input_names.at(0).find_last_of(".")-1 );
