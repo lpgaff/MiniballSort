@@ -3,9 +3,9 @@ name: clang-tidy-review
 # Eventually, this should only be pull_request, but push is done here for testing
 on:
 	push:
-	branches: [ "*" ]
+		branches: [ "*" ]
 	pull_request:
-	branches: [ "main" ]
+		branches: [ "main" ]
 
 jobs:
 	build:
