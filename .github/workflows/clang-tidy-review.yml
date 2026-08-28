@@ -2,34 +2,35 @@ name: clang-tidy-review
 
 # Eventually, this should only be pull_request, but push is done here for testing
 on:
-	push:
-		branches: [ "*" ]
-	pull_request:
-		branches: [ "main" ]
+  push:
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-	build:
-		runs-on: ubuntu-latest
-		container:
-		image: rootproject/root
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: rootproject/root
 
-		steps:
-		- run: echo "Job triggered by ${{ github.event_name }} event."
-		- run: echo "Repo '${{ github.ref }}' branch '${{ github.repository }}'."
-		- uses: actions/checkout@v4
-		- name: Install packages
-			run: sudo apt-get update -yq > /dev/null
-				 sudo apt-get install -y --no-install-recommends bear
-		- name: make
-			run: bear -- make
+    steps:
+      - run: echo "Job triggered by ${{ github.event_name }} event."
+      - run: echo "Repo '${{ github.ref }}' branch '${{ github.repository }}'."
+      - uses: actions/checkout@v4
+      - name: Install packages
+        run: |
+          apt-get update -yq > /dev/null
+          apt-get install -y --no-install-recommends bear
+      - name: make
+        run: bear -- make
 
-		- uses: ZedThree/clang-tidy-review@v0.22.0
-			id: review
+      - uses: ZedThree/clang-tidy-review@v0.22.0
+        id: review
 
-		# Uploads an artefact containing clang_fixes.json
-		- uses: ZedThree/clang-tidy-review/upload@v0.22.0
-			id: upload-review
+      # Uploads an artefact containing clang_fixes.json
+      - uses: ZedThree/clang-tidy-review/upload@v0.22.0
+        id: upload-review
 
-		# If there are any comments, fail the check
-		- if: steps.review.outputs.total_comments > 0
-			run: exit 1
+      # If there are any comments, fail the check
+      - if: steps.review.outputs.total_comments > 0
+        run: exit 1
