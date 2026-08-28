@@ -56,3 +56,8 @@ test/*
 
 # Utils
 utils/mb_angle_fit
+
+# clang-tidy and bear
+compile_commands.json
+fixes.yml
+tmp.txt
